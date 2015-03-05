@@ -26,7 +26,8 @@
         }
         $(document).ready(function () {
             $('.roulette').pushpin({
-                top: $('#what').offset().top
+                top: $('#what>.section-card').offset().top,
+                offset: 120
             });
         });
     </script>

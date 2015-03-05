@@ -1,0 +1,14 @@
+p {
+    line-height: 1.5;
+}
+
+.firstLetter {
+    float: left;
+    font-size: 3.26em;
+    line-height: 0.5;
+    margin: 0.205em 0.153em 0 0;
+}
+
+.firstLetter + span {
+    margin-left: -0.5em;
+}

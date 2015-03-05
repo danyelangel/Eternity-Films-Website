@@ -19,9 +19,18 @@
             }
         }
     }
-    .section-card-shadow
+    .section-card-shadow {
+        height: 1em;
+        box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.16);
+        transform: translateZ(1px);
+        background: color("shades", "white");
+    }
+    .section-card-background {
+        height: 4em;
+        transform: translateZ(2px);
+        background: color("shades", "white");
+    }
     .section-card {
         background: color("shades", "white");
-        box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.16);
     }
 }
