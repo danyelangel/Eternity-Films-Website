@@ -1,29 +1,26 @@
-.section {
-    .section-title {
-        z-index: 1;
-        h1 {
-            text-align: center;
-            font-weight: 900;
-            font-size: 4em;
-            color: color("grey", "lighten-2");
-            margin: 0;
-        }
-        @media (min-width: 600px) {
-            h1 {
-                font-size: 7em;
-            }
-        }
-        @media (min-width: 992px) {
-            h1 {
-                font-size: 10em;
-            }
-        }
+.big-quotes {
+    display: inline-block;
+    content: '\201D';
+    font-size: 1em;
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    color: color("grey", "lighten-2");
+}
+
+.roulette {
+    h4::before {
+        @extend .big-quotes;
+        transform: scale(-2, 2) translate(40%, 10%);
     }
-    .section-card {
-        padding-top: 5em;
-        background: color("shades", "white");
-        height: 110vh;
-        box-shadow: 0 0px 25px 0 rgba(0, 0, 0, 0.16);
-        transform: translateZ(1px);
+    h4::after {
+        @extend .big-quotes;
+        transform: scale(2, 2) translate(40%, 10%);
+    }
+    h4 {
+        font-weight: 700;
+    }
+    @media (max-width: 600px) {
+        h4 {
+            font-size: 1.5em;
+        }
     }
 }
