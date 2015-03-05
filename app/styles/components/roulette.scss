@@ -30,4 +30,10 @@
         margin: 0;
         margin-bottom: 2em;
     }
+    img {
+        width: 345px;
+    }
+    &.pinned {
+        transform: translateY(5em);
+    }
 }
