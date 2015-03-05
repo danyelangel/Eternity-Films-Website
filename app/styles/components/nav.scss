@@ -1,0 +1,19 @@
+nav {
+    box-shadow: none;
+    height: 150px;
+    line-height: 150px;
+    .brand-logo {
+        display: flex;
+        font-size: auto;
+        height: 100%;
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+#nav-mobile {}
+
+#nav-mobile a {
+    color: color("grey", "darken-2");
+}

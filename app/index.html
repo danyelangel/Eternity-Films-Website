@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!--@@include( '_markup/head.html') -->
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--@@include( 'intro.html') -->
+    <!--@@include('_markup/nav.html') -->
+    <!--@@include( 'splash.html') -->
+    <!--@@include( 'what.html') -->
+    <!--@@include( 'portfolio.html') -->
+    <!--@@include( 'about.html') -->
+    <!--@@include( 'footer.html') -->
+
+    <!--@@include( '_markup/analytics.html', { "analyticsID" : "UA-XXXXX-X" } ) -->
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+        if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+            skrollr.init({
+                forceHeight: false
+            });
+        }
+    </script>
+
+</body>
+
+</html>

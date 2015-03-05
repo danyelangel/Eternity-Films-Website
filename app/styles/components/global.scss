@@ -1,0 +1,17 @@
+html {
+    font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: color("grey", "lighten-5");
+}
+
+//Fixed width .container
+@media (min-width: 600px) {
+    .container {
+        width: 550px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+}
