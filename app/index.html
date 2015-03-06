@@ -29,6 +29,29 @@
                 top: $('#what>.section-card').offset().top,
                 offset: 120
             });
+            $(window).scroll(function () {
+                var services = {
+                        film: 'FILM PRODUCTION',
+                        web: 'WEB',
+                        photo: 'PHOTOGRAPHY',
+                        design: 'DESIGN',
+                        marketing: 'MARKETING'
+                    },
+                    titles = {
+                        film: 'Show don\'t tell',
+                        web: 'Your customers are online, you should be too',
+                        photo: 'You don’t take a photograph, you make it',
+                        design: 'Your brand is a promise. Your brand is an asset',
+                        marketing: 'If your work is not online it does not exist'
+                    }
+                for (service in services) {
+                    alert(services[service]);
+                    if ($('.' + service).visible()) {
+                        $('.roulette>h4').html(services[service]);
+                        $('.roulette>p>i').html(titles[service]);
+                    }
+                }
+            });
         });
     </script>
 

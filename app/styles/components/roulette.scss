@@ -7,6 +7,9 @@
 }
 
 .roulette {
+    @media (min-width: 992px) {
+        width: 345px;
+    }
     h4 {
         font-weight: 700;
         margin: 0;
@@ -32,5 +35,7 @@
     }
     img {
         width: 345px;
+        position: absolute;
+        top: 130px;
     }
 }

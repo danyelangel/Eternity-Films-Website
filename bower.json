@@ -1,9 +1,24 @@
 {
-  "name": "eternity",
-  "private": true,
-  "dependencies": {
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.1",
-    "materialize": "~0.95.3"
-  }
+    "name": "eternity",
+    "private": true,
+    "dependencies": {
+        "jquery": "~2.1.1",
+        "modernizr": "~2.8.1",
+        "materialize": "~0.95.3",
+        "jquery.visible": "~1.1.0",
+        "bower-skrollr": "~0.6.26"
+    },
+    "version": "0.0.0",
+    "homepage": "https://github.com/danyelangel/Eternity-Films-Website",
+    "authors": [
+    "danyelangel"
+  ],
+    "license": "MIT",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
