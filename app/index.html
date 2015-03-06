@@ -43,12 +43,19 @@
                         photo: 'You don’t take a photograph, you make it',
                         design: 'Your brand is a promise. Your brand is an asset',
                         marketing: 'If your work is not online it does not exist'
-                    }
+                    };
+
+                function changeTitle(service, title) {
+                    $('.roulette>h4').html(service);
+                    $('.roulette>p>i').html(title);
+                }
                 for (service in services) {
-                    alert(services[service]);
-                    if ($('.' + service).visible()) {
-                        $('.roulette>h4').html(services[service]);
-                        $('.roulette>p>i').html(titles[service]);
+                    if ($('.' + service + '>.quote').visible()) {
+
+                        changeTitle(services[service], titles[service]);
+
+
+
                     }
                 }
             });

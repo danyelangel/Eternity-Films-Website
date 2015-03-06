@@ -51,7 +51,7 @@
     <div class="section-card">
         <div class="container">
             <div class="row">
-                <div class="col l5 m12">
+                <div class="col l5 hide-on-med-and-down">
                     <div class="roulette">
     <h4 class="center">FILM PRODUCTION</h4>
     <p class="center">
@@ -63,26 +63,56 @@
                 <div class="col l5 white-text" style="height:1px">.</div>
                 <div class="col l5 offset-l2">
                     <div class="film service_wrapper">
+    <div class="hide-on-large-only">
+        <h4 class="center weight-700">FILM PRODUCTION</h4>
+        <p class="center">
+            <i>Show don't tell</i>
+        </p>
+    </div>
     <p class="grey-text" style="margin-top:0"><span class="firstLetter amber-text">I</span>n today’s age videos have become the most effective way to communicate any idea. It overcomes many barriers such as language and distance, it also involves several senses at the same time, from visual to auditory, to sense memory. In a marketing strategy videos are essencial.</p>
     <p class="quote amber-text">Videos help you grow your brand even when you are not there.</p>
     <p class="grey-text">Eternity Films designed to engage, influence and reach people over the world whtough motion pictures that will live in your memory forever. Our team of writers, directors, producers and cinematographers handle projects of nearly every scale and genre fron single camera studio interviews to multi camera, multicrew commercial shoots in multiple locations around the world.</p>
 </div>
                     <div class="web service_wrapper">
+    <div class="hide-on-large-only">
+        <h4 class="center weight-700">WEB DEVELOPMENT</h4>
+        <p class="center">
+            <i>Your customers are online, you should be too</i>
+        </p>
+    </div>
     <p class="grey-text"><span class="firstLetter green-text">E</span>ternity Films is dedicated to achieve persistent success in the market place over competition by making your project discoverable. We create mobile-friendly websites that improve your visibility. By taking care of your search engine rankings, creating great content that people want to link to, and curating content, we boost your relevance and online presence.</p>
     <p class="quote green-text">We take your online presence seriously and there is no better way to compete with “the bigs.” </p>
     <p class="grey-text">We create mobile-friendly websites that improve your visibility. By taking care of your search engine rankings, creating great content that people want to link to, and curating content, we boost your relevance and online presence.</p>
 </div>
                     <div class="photo service_wrapper">
+    <div class="hide-on-large-only">
+        <h4 class="center weight-700">PHOTOGRAPHY</h4>
+        <p class="center">
+            <i>You don't take a photograph, you make it</i>
+        </p>
+    </div>
     <p class="grey-text"><span class="firstLetter blue-text">I</span>n the age of visual content, photos are the universal language. Photographs provide an immediate and intense impact in a customer’s mind, leaving a lasting impression and memory. A photo either helps or hurts your business.</p>
     <p class="quote blue-text">To a customer, it can make the difference between making and not making a purchase.</p>
     <p class="grey-text">Through professional photographs, we lead your business not only to greater sales, but also to increase the overall presence and perception of your business, resulting in greater long term growth. These can be used for press releases, websites, brochures, or any promotional materials and can showcase what your business does beyond your products or service.</p>
 </div>
                     <div class="design service_wrapper">
-    <p class="grey-text"><span class="firstLetter red-text">Y</span>our brand identity is meant to be the “face” of your company.</p>
-    <p class="quote red-text">A logo is the basic unit of a larger brand identity that includes company fonts, colors, document-design guidelines.</p>
-    <p class="grey-text">As consumers grow to know, like and trust your brand, they’re more likely to respond positively to sequential encounters with your logo, potentially leading to increased sales or improved mind share within the target market. Eternity Films focuses on who you are as a company and how you want to be perceived in the market. Through design we establish a unique brand identity for your project, this is the simplest way to convey to your clients an idea or message as it is to be portrayed visually and personally.</p>
+    <div class="hide-on-large-only">
+        <h4 class="center weight-700">DESIGN</h4>
+        <p class="center">
+            <i>Your brand is a promise. Your brand is an asset.</i>
+        </p>
+    </div>
+    <p class="grey-text"><span class="firstLetter red-text">Y</span>our brand identity is meant to be the “face” of your company. A logo is the basic unit of a larger brand identity that includes company fonts, colors, document-design guidelines. As consumers grow to know, like and trust your brand, they’re more likely to respond positively to sequential encounters with your logo, potentially leading to increased sales or improved mind share within the target market.</p>
+    <p class="quote red-text">Eternity Films focuses on who you are as a company and how you want to be perceived in the market.</p>
+    <p class="grey-text">Through design we establish a unique brand identity for your project, this is the simplest way to convey to your clients an idea or message as it is to be portrayed visually and personally.</p>
 </div>
-                    <div class="marketing">
+                    <div class="marketing service_wrapper-last">
+    <div class="hide-on-large-only">
+        <h4 class="center weight-700">MARKETING</h4>
+        <p class="center">
+            <i>If your work is not online it doesn not exist</i>
+        </p>
+    </div>
     <p class="grey-text"><span class="firstLetter purple-text">E</span>xposure is the product of a marketing strategy, it determines a company’s success in the market by attracting people and making it more credible to consumers.
     </p>
     <p class="quote purple-text">Your customers are trying to find you and we'll help them reach you.</p>
@@ -140,12 +170,19 @@
                         photo: 'You don’t take a photograph, you make it',
                         design: 'Your brand is a promise. Your brand is an asset',
                         marketing: 'If your work is not online it does not exist'
-                    }
+                    };
+
+                function changeTitle(service, title) {
+                    $('.roulette>h4').html(service);
+                    $('.roulette>p>i').html(title);
+                }
                 for (service in services) {
-                    alert(services[service]);
-                    if ($('.' + service).visible()) {
-                        $('.roulette>h4').html(services[service]);
-                        $('.roulette>p>i').html(titles[service]);
+                    if ($('.' + service + '>.quote').visible()) {
+
+                        changeTitle(services[service], titles[service]);
+
+
+
                     }
                 }
             });

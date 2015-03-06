@@ -11,8 +11,13 @@
         width: 345px;
     }
     h4 {
+        transition: opacity .3s;
         font-weight: 700;
         margin: 0;
+        font-size: 2em;
+        @media (max-width: 600px) {
+            font-size: 1.5em;
+        }
     }
     h4::before {
         @extend .big-quotes;
@@ -22,16 +27,14 @@
         @extend .big-quotes;
         transform: scale(2, 2) translate(40%, 10%);
     }
-    @media (max-width: 600px) {
-        h4 {
-            font-size: 1.5em;
-        }
-    }
     p {
-        font-size: 2em;
+        transition: opacity .3s;
+        color: color("grey", "base");
+        font-size: 1.8em;
         font-weight: 300;
         margin: 0;
         margin-bottom: 2em;
+        line-height: 1.2em;
     }
     img {
         width: 345px;
