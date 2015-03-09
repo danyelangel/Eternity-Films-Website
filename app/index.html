@@ -7,9 +7,9 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="grey lighten-5 z-depth-1">
-        <!--@@include( 'intro.html') -->
+    <div class="z-depth-1" style="background:rgb(250,250,250)">
         <!--@@include('_markup/nav.html') -->
+        <!--@@include( 'intro.html') -->
         <!--@@include( 'splash.html') -->
         <!--@@include( 'what.html') -->
         <!--@@include( 'portfolio.html') -->
@@ -93,12 +93,17 @@
                             $('nav, nav ul a').removeClass();
                             $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
                             $('nav').addClass('grey lighten-5');
-                            $('nav ul a').addClass('valign grey-text text-darken-2 weight-400');
+                            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
                             return true
                         }
+                        /*if ($(window).scrollTop() < 0.3 * $(window).height()) {
+                            $('nav, nav ul a').removeClass();
+                            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
+                            $('nav ul a').addClass('valign white-text weight-300');
+                        }*/
                     }
-
                     checkServiceVisibility();
+
 
                 });
                 $(window).scrollTop(5);
