@@ -1,0 +1,25 @@
+.portfolio-item {
+    height: 40vh;
+    transform: translateY(-9em);
+    @media (max-width: 992px) {
+        height: 30vh;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        line-height: 0.5em;
+        height: 0.3em;
+        color: color("shades", "white");
+        @extend .weight-700;
+    }
+    h4 {
+        text-align: center;
+        font-size: 2em;
+        line-height: 0.5em;
+        color: color("shades", "white");
+        @extend .weight-100;
+    }
+    .valign {
+        width: 100%;
+    }
+}

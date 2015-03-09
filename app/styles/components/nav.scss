@@ -1,5 +1,5 @@
 nav {
-    transition: box-shadow 0.3s;
+    transition: background .3s, box-shadow 0.3s;
     box-shadow: none;
     height: 150px;
     line-height: 150px;
@@ -12,8 +12,6 @@ nav {
         }
     }
 }
-
-#nav-mobile {}
 
 #nav-mobile a {
     color: color("grey", "darken-2");

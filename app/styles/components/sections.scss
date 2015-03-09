@@ -7,30 +7,30 @@
             font-size: 4em;
             color: color("grey", "lighten-2");
             margin: 0;
-        }
-        @media (min-width: 600px) {
-            h1 {
+            @media (min-width: 600px) {
                 font-size: 7em;
             }
-        }
-        @media (min-width: 992px) {
-            h1 {
+            @media (min-width: 992px) {
                 font-size: 10em;
             }
         }
     }
     .section-card-shadow {
-        height: 1em;
+        height: 4em;
         box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16);
         transform: translateZ(1px);
         background: color("shades", "white");
     }
     .section-card-background {
-        height: 4em;
+        height: 5em;
         transform: translateZ(2px);
         background: color("shades", "white");
     }
     .section-card {
+        padding-bottom: 100px;
+        margin: 0;
         background: color("shades", "white");
+        background: linear-gradient(to top, color("grey", "lighten-5") 0%, color("shades", "white") 30%);
+        /* W3C */
     }
 }

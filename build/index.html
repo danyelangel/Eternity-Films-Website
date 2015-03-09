@@ -15,15 +15,15 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    
-    <div class="navbar-fixed">
-    <nav class="grey lighten-5" data-0p="line-height:120px;height:120px;@class:!grey lighten-5" data-20p="line-height:80px;height:80px;@class:!grey lighten-5 z-depth-1">
+    <div class="grey lighten-5 z-depth-1">
+        
+        <div class="navbar-fixed">
+    <nav class="grey lighten-5" data-0p="line-height:120px;height:120px;" data-20p="line-height:80px;height:80px;">
         <div class="nav-wrapper container">
             <a href="#" class="brand-logo valign-wrapper"><img src="images/navlogo.png" class="valign" height="90" data-0p="height:70px;" data-20p="height:55px;">
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Portfolio</a>
+                <li><a href="#portfoo" onclick="$('window').scrollTo('#portfolio', 800 )">Portfolio</a>
                 </li>
                 <li><a href="components.html">Services</a>
                 </li>
@@ -35,14 +35,14 @@
         </div>
     </nav>
 </div>
-    <div id="hero-img" class="container valign-wrapper">
+        <div id="hero-img" class="container valign-wrapper">
     <div class="row valign">
         <div class="col m10 s12 offset-m1">
-            <img src="images/hero.png" class="responsive-img">
+            <img src="images/hero.png" class="responsive-img" data-center-center="transform:translateY(-4em);opacity:1;" data--200-center-center="transform:translateY(1em);opacity:0;">
         </div>
     </div>
 </div>
-    <div id="what" class="section">
+        <div id="what" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
         <h1>What we do</h1>
     </div>
@@ -53,10 +53,15 @@
             <div class="row">
                 <div class="col l5 hide-on-med-and-down">
                     <div class="roulette">
-    <h4 class="center">FILM PRODUCTION</h4>
+    <h4 class="center">ETERNITY FILMS</h4>
     <p class="center">
-        <i>Show don't tell</i>
+        <i>Show, don't tell</i>
     </p>
+    <img src="images/roulette_film.png" class="responsive-img hide-on-med-and-down roulette-film roulette-current">
+    <img src="images/roulette_web.png" class="responsive-img hide-on-med-and-down roulette-web roulette-current">
+    <img src="images/roulette_photo.png" class="responsive-img hide-on-med-and-down roulette-photo roulette-current">
+    <img src="images/roulette_design.png" class="responsive-img hide-on-med-and-down roulette-design roulette-current">
+    <img src="images/roulette_marketing.png" class="responsive-img hide-on-med-and-down roulette-marketing roulette-current">
     <img src="images/roulette.png" class="responsive-img hide-on-med-and-down">
 </div>
                 </div>
@@ -69,9 +74,9 @@
             <i>Show don't tell</i>
         </p>
     </div>
-    <p class="grey-text" style="margin-top:0"><span class="firstLetter amber-text">I</span>n today’s age videos have become the most effective way to communicate any idea. It overcomes many barriers such as language and distance, it also involves several senses at the same time, from visual to auditory, to sense memory. In a marketing strategy videos are essencial.</p>
+    <p class="grey-text" style="margin-top:0"><span class="firstLetter amber-text">I</span>n today’s age, videos have become the most effective way to communicate any idea. They overcome many barriers such as language and distance, while also involving several senses at the same time. In a marketing strategy videos are essencial.</p>
     <p class="quote amber-text">Videos help you grow your brand even when you are not there.</p>
-    <p class="grey-text">Eternity Films designed to engage, influence and reach people over the world whtough motion pictures that will live in your memory forever. Our team of writers, directors, producers and cinematographers handle projects of nearly every scale and genre fron single camera studio interviews to multi camera, multicrew commercial shoots in multiple locations around the world.</p>
+    <img src="images/film-services.png" class="responsive-img">
 </div>
                     <div class="web service_wrapper">
     <div class="hide-on-large-only">
@@ -80,9 +85,9 @@
             <i>Your customers are online, you should be too</i>
         </p>
     </div>
-    <p class="grey-text"><span class="firstLetter green-text">E</span>ternity Films is dedicated to achieve persistent success in the market place over competition by making your project discoverable. We create mobile-friendly websites that improve your visibility. By taking care of your search engine rankings, creating great content that people want to link to, and curating content, we boost your relevance and online presence.</p>
-    <p class="quote green-text">We take your online presence seriously and there is no better way to compete with “the bigs.” </p>
-    <p class="grey-text">We create mobile-friendly websites that improve your visibility. By taking care of your search engine rankings, creating great content that people want to link to, and curating content, we boost your relevance and online presence.</p>
+    <p class="grey-text"><span class="firstLetter green-text">E</span>ternity Films is dedicated to achieve persistent success in the market place over competition by making your project discoverable. We create mobile-friendly websites that improve your visibility.</p>
+    <p class="quote green-text">We take your online presence very seriously. </p>
+    <img src="images/web-services.png" class="responsive-img">
 </div>
                     <div class="photo service_wrapper">
     <div class="hide-on-large-only">
@@ -91,9 +96,9 @@
             <i>You don't take a photograph, you make it</i>
         </p>
     </div>
-    <p class="grey-text"><span class="firstLetter blue-text">I</span>n the age of visual content, photos are the universal language. Photographs provide an immediate and intense impact in a customer’s mind, leaving a lasting impression and memory. A photo either helps or hurts your business.</p>
-    <p class="quote blue-text">To a customer, it can make the difference between making and not making a purchase.</p>
-    <p class="grey-text">Through professional photographs, we lead your business not only to greater sales, but also to increase the overall presence and perception of your business, resulting in greater long term growth. These can be used for press releases, websites, brochures, or any promotional materials and can showcase what your business does beyond your products or service.</p>
+    <p class="grey-text"><span class="firstLetter blue-text">I</span>n the age of visual content, photos are the universal language. They provide an immediate and intense impact in the mind of a customer, leaving a lasting impression. A photo either helps or hurts your business.</p>
+    <p class="quote blue-text">A photograph can make the difference between making or not making a purchase.</p>
+    <img src="images/photo-services.png" class="responsive-img">
 </div>
                     <div class="design service_wrapper">
     <div class="hide-on-large-only">
@@ -102,9 +107,9 @@
             <i>Your brand is a promise. Your brand is an asset.</i>
         </p>
     </div>
-    <p class="grey-text"><span class="firstLetter red-text">Y</span>our brand identity is meant to be the “face” of your company. A logo is the basic unit of a larger brand identity that includes company fonts, colors, document-design guidelines. As consumers grow to know, like and trust your brand, they’re more likely to respond positively to sequential encounters with your logo, potentially leading to increased sales or improved mind share within the target market.</p>
-    <p class="quote red-text">Eternity Films focuses on who you are as a company and how you want to be perceived in the market.</p>
-    <p class="grey-text">Through design we establish a unique brand identity for your project, this is the simplest way to convey to your clients an idea or message as it is to be portrayed visually and personally.</p>
+    <p class="grey-text"><span class="firstLetter red-text">Y</span>our brand identity is meant to be the “face” of your company. Through design we establish a unique identity for your project. This is the simplest way to accurately convey an idea to your clients.</p>
+    <p class="quote red-text">Eternity Films focuses on who you are and how you want to be perceived in the market.</p>
+    <img src="images/design-services.png" class="responsive-img">
 </div>
                     <div class="marketing service_wrapper-last">
     <div class="hide-on-large-only">
@@ -116,16 +121,103 @@
     <p class="grey-text"><span class="firstLetter purple-text">E</span>xposure is the product of a marketing strategy, it determines a company’s success in the market by attracting people and making it more credible to consumers.
     </p>
     <p class="quote purple-text">Your customers are trying to find you and we'll help them reach you.</p>
-    <p class="grey-text">Through search engine optimization and social media content we build a reputation for your brand around your company’s values, benefits and advantages. We create social engagement increasing your popularity, attracting new customers and all kinds of other opportunities for you or your business.</p>
+    <img src="images/marketing-services.png" class="responsive-img">
 </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-    
-    
-    
+        <div id="portfolio" class="section">
+    <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
+        <h1>Portfolio</h1>
+    </div>
+    <div class="section-card-shadow"></div>
+    <div class="section-card-background"></div>
+    <div class="section-card">
+        <div class="row portfolio-container">
+            <div class="col m6 s12 grey portfolio-item valign-wrapper">
+                <div class="valign">
+                    <h2>THE LAST CALL</h2>
+                    <h4>THE GIMLET</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        <div id="about" class="section">
+    <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
+        <h1>About Us</h1>
+    </div>
+    <div class="section-card-shadow"></div>
+    <div class="section-card-background"></div>
+    <div class="section-card">
+        <div class="container">
+            <div class="row">
+                <img src="images/about-diagram.png" class="responsive-img col s12 l8 offset-l2" style="margin-bottom:50px">
+            </div>
+            <div class="row">
+                <div class="col s12 l4">
+                    <h1 class="weight-100">"Show, don't tell"</h1>
+                </div>
+                <div class="col l4 m6 s12 grey-text weight-300 em1-3">
+                    <p>Eternity Films is a media company based in Miami, FL that provides end to end production services. It works under a model well </p>
+                </div>
+                <div class="col l4 m6 s12 grey-text weight-300 em1-3">
+                    <p>known as SCENIUS; great ideas are birthed by this group of creative artists who make up an ecology of talent.
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:10em">
+                <h5 class="weight-300 center">THE TEAM</h5>
+            </div>
+            <div class="row">
+                <div class="col l3 m6 s8 offset-s2">
+                    <img src="images/team_kelly.png" class="responsive-img circle">
+                    <p class="center weight-300 em1-3">KELLY<b>OVIEDO</b>
+                    </p>
+                    <p class="center grey-text">PRODUCER
+                        <br>FILMMAKER
+                    </p>
+                </div>
+                <div class="col l3 m6 s8 offset-s2">
+                    <img src="images/team_daniel.png" class="responsive-img circle">
+                    <p class="center weight-300 em1-3">DANIEL<b>&Aacute;NGEL</b>
+                    </p>
+                    <p class="center grey-text">PHOTOGRAPHER
+                        <br>WEB DEVELOPER
+                    </p>
+                </div>
+                <div class="col l3 m6 s8 offset-s2">
+                    <img src="images/team_daniela.png" class="responsive-img circle">
+                    <p class="center weight-300 em1-3">DANIELA<b>GONZ&Aacute;LEZ</b>
+                    </p>
+                    <p class="center grey-text">DESIGNER
+                        <br>ANIMATOR
+                    </p>
+                </div>
+                <div class="col l3 m6 s8 offset-s2">
+                    <img src="images/team_diego.png" class="responsive-img circle">
+                    <p class="center weight-300 em1-3">DIEGO<b>G&Oacute;MEZ</b>
+                    </p>
+                    <p class="center grey-text">SOUND DESIGNER
+                        <br>COMPOSER
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="footer_placeholder"></div>
+<div class="footer valign-wrapper">
+    <div class="valign">
+
+        <img src="images/eternitylogo_white.png">
+        <p class="center white-text weight-300">&copy; 2015</p>
+    </div>
+</div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -150,43 +242,86 @@
             skrollr.init({
                 forceHeight: false
             });
-        }
-        $(document).ready(function () {
-            $('.roulette').pushpin({
-                top: $('#what>.section-card').offset().top,
-                offset: 120
-            });
-            $(window).scroll(function () {
-                var services = {
-                        film: 'FILM PRODUCTION',
-                        web: 'WEB',
-                        photo: 'PHOTOGRAPHY',
-                        design: 'DESIGN',
-                        marketing: 'MARKETING'
-                    },
-                    titles = {
-                        film: 'Show don\'t tell',
-                        web: 'Your customers are online, you should be too',
-                        photo: 'You don’t take a photograph, you make it',
-                        design: 'Your brand is a promise. Your brand is an asset',
-                        marketing: 'If your work is not online it does not exist'
-                    };
 
-                function changeTitle(service, title) {
-                    $('.roulette>h4').html(service);
-                    $('.roulette>p>i').html(title);
-                }
-                for (service in services) {
-                    if ($('.' + service + '>.quote').visible()) {
+            $(document).ready(function () {
+                $('.roulette').pushpin({
+                    top: $('#what>.section-card').offset().top,
+                    bottom: $('.marketing').offset().top - 0,
+                    offset: 120
+                });
+                $(window).scroll(function () {
+                    var services = {
+                            film: 'FILM PRODUCTION',
+                            web: 'WEB',
+                            photo: 'PHOTOGRAPHY',
+                            design: 'DESIGN',
+                            marketing: 'MARKETING'
+                        },
+                        titles = {
+                            film: 'Show don\'t tell',
+                            web: 'Your customers are online, you should be too',
+                            photo: 'You don’t take a photograph, you make it',
+                            design: 'Your brand is a promise. Your brand is an asset',
+                            marketing: 'If your work is not online it does not exist'
+                        },
+                        images = {
+                            film: 'film',
+                            web: 'web',
+                            photo: 'photo',
+                            design: 'design',
+                            marketing: 'marketing'
+                        },
+                        colors = {
+                            film: 'amber',
+                            web: 'green',
+                            photo: 'blue',
+                            design: 'red',
+                            marketing: 'purple'
+                        };
 
-                        changeTitle(services[service], titles[service]);
-
-
-
+                    function changeTitle(service, title, image) {
+                        $('.roulette>h4').html(service);
+                        $('.roulette>p>i').html(title);
+                        $('.roulette>.roulette-current').css('opacity', '0');
+                        $('.roulette>.roulette-' + image).css('opacity', '1');
                     }
-                }
+
+                    function checkServiceVisibility() {
+                        for (service in services) {
+                            if ($('.' + service + '>p').visible(true)) {
+                                changeTitle(services[service], titles[service], images[service]);
+                                $('.' + service).css('opacity', 1);
+                                $('nav, nav ul a').removeClass();
+                                $('nav').addClass(colors[service]);
+                                $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
+                                $('nav').addClass('darken-2 z-depth-1');
+                                $('nav ul a').addClass('valign white-text weight-300');
+                                return true
+                            }
+
+                        }
+                        if (!$('.roulette').visible() && $(window).scrollTop() > $('#what').offset().top) {
+                            $('nav, nav ul a').removeClass();
+                            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
+                            $('nav').addClass('grey darken-3 z-depth-1');
+                            $('nav ul a').addClass('valign white-text text-darken-2 weight-300');
+                            return true
+                        }
+                        if ($(window).scrollTop() < $('#what').offset().top) {
+                            $('nav, nav ul a').removeClass();
+                            $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
+                            $('nav').addClass('grey lighten-5');
+                            $('nav ul a').addClass('valign grey-text text-darken-2 weight-400');
+                            return true
+                        }
+                    }
+
+                    checkServiceVisibility();
+
+                });
+                $(window).scrollTop(5);
             });
-        });
+        }
     </script>
 
 </body>

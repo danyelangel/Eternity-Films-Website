@@ -1,5 +1,6 @@
 //Variables
 @import "components/colors";
+@import "components/utilities";
 //Layout
 @import "components/global";
 @import "components/nav";
@@ -8,8 +9,10 @@
 //Sections
 @import "components/splash";
 @import "components/what";
+@import "components/footer";
 //Components
 @import "components/roulette";
+@import "components/portfolio-items";
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;

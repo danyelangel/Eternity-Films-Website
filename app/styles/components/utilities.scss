@@ -29,3 +29,23 @@ $args2) {
 .z-depth-5 {
     @include box-shadow-2(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
 }
+
+//Flex Aligns
+.flex-align-bottom {
+    display: flex;
+    * {
+        align-self: flex-end;
+    }
+}
+.flex-align-middle {
+    display: flex;
+    * {
+        align-self:center
+    }
+}
+.flex-align-top {
+    display: flex;
+    * {
+        align-self: flex-start;
+    }
+}
