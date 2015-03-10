@@ -1,6 +1,5 @@
 .service_wrapper {
-    opacity: 0;
-    transition: all 1s;
+    opacity: 1;
     @media (min-width: 992px) {
         margin-bottom: 20em;
     }
@@ -12,12 +11,46 @@
 }
 
 .service_wrapper-last {
-    opacity: 0;
-    transition: all 1s;
+    opacity: 1;
     @media (min-width: 992px) {
         margin-bottom: 10em;
     }
     @media (max-width: 992px) {
         padding-bottom: 5em;
+    }
+}
+
+.what-fix {
+    display: none;
+}
+
+.what-fix-mobile {
+    display: block;
+}
+
+.what-title {
+    display: block !important;
+}
+
+.hasjs {
+    .roulette-wrapper {
+        display: block;
+    }
+    .what-title {
+        display: none !important;
+    }
+    .what-fix {
+        display: block;
+    }
+    .what-fix-mobile {
+        display: none;
+    }
+    .service_wrapper {
+        opacity: 0;
+        transition: all 1s;
+    }
+    .service_wrapper-last {
+        opacity: 0;
+        transition: all 1s;
     }
 }

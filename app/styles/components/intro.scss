@@ -1,0 +1,19 @@
+.intro_slide {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    .valign {
+        width: 100%;
+    }
+    .intro-image {
+        height: 100vh;
+        background-size: contain;
+        background-position: center;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+    }
+}
+
+.intro-text {
+    transform: translateY(-150%);
+}

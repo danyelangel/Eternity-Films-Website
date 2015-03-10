@@ -1,5 +1,13 @@
 #hero-img {
-    height: 330vh;
     display: flex;
-    .valign-wrapper {}
+    height: 100vh;
+    .valign-wrapper {
+        height: 100vh;
+    }
+    &.hasjs {
+        height: 330vh;
+        .valign-wrapper {
+            height: auto;
+        }
+    }
 }

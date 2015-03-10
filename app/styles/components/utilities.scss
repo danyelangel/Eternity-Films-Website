@@ -37,15 +37,25 @@ $args2) {
         align-self: flex-end;
     }
 }
+
 .flex-align-middle {
     display: flex;
     * {
-        align-self:center
+        align-self: center
     }
 }
+
 .flex-align-top {
     display: flex;
     * {
         align-self: flex-start;
+    }
+}
+
+.valign-wrapper {
+    display: flex;
+    align-items: center;
+    .valign {
+        display: block;
     }
 }

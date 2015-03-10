@@ -6,7 +6,12 @@
     color: color("grey", "lighten-2");
 }
 
+.roulette-wrapper {
+    display: none;
+}
+
 .roulette {
+    display: block;
     @media (min-width: 992px) {
         width: 345px;
     }
