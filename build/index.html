@@ -121,6 +121,7 @@
     <p class="center">
         <i>Show, don't tell</i>
     </p>
+    <a href="#" class="film-icon"><i class="mdi-av-videocam"></i></a>
     <img src="images/roulette_film.png" class="responsive-img hide-on-med-and-down roulette-film roulette-current">
     <img src="images/roulette_web.png" class="responsive-img hide-on-med-and-down roulette-web roulette-current">
     <img src="images/roulette_photo.png" class="responsive-img hide-on-med-and-down roulette-photo roulette-current">
@@ -360,13 +361,13 @@
                             $('nav, nav ul a').removeClass();
                             $('nav').addClass(colors[service]);
                             $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
-                            $('nav').addClass('darken-2 z-depth-1');
+                            $('nav').addClass('darken-0 z-depth-1');
                             $('nav ul a').addClass('valign white-text weight-300');
                             return true
                         }
 
                     }
-                    if (!$('.roulette').visible() && $(window).scrollTop() > $('#what').offset().top) {
+                    if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
                         $('nav, nav ul a').removeClass();
                         $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
                         $('nav').addClass('grey darken-3 z-depth-1');

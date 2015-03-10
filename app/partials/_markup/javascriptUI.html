@@ -56,13 +56,13 @@
                             $('nav, nav ul a').removeClass();
                             $('nav').addClass(colors[service]);
                             $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
-                            $('nav').addClass('darken-2 z-depth-1');
+                            $('nav').addClass('darken-0 z-depth-1');
                             $('nav ul a').addClass('valign white-text weight-300');
                             return true
                         }
 
                     }
-                    if (!$('.roulette').visible() && $(window).scrollTop() > $('#what').offset().top) {
+                    if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
                         $('nav, nav ul a').removeClass();
                         $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
                         $('nav').addClass('grey darken-3 z-depth-1');

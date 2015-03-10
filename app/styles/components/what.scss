@@ -36,8 +36,10 @@
     .roulette-wrapper {
         display: block;
     }
-    .what-title {
-        display: none !important;
+    @media (min-width: 992px) {
+        .what-title {
+            display: none !important;
+        }
     }
     .what-fix {
         display: block;
