@@ -21,6 +21,12 @@
         transform: translateZ(1px);
         background: color("shades", "white");
     }
+    .section-card-shadow__tabs {
+        height: 1em;
+        transform: translateZ(1px);
+        box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16);
+        background: color("shades", "white");
+    }
     .section-card-background {
         height: 5em;
         transform: translateZ(2px);

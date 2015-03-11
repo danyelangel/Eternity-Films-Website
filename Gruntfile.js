@@ -24,6 +24,17 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+            fonts: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: 'bower_components/materialize/font/material-design-icons/**',
+                        dest: 'build/font/material-design-icons/',
+                        filter: 'isFile'
+                    }
+                ]
+            },
             js: {
                 files: [
                     {
@@ -46,7 +57,11 @@ module.exports = function (grunt) {
                 dest: '.tmp/js/_bower.js',
                 cssDest: '.tmp/css/_bower.css',
                 bowerOptions: {
-                    relative: false
+                    relative: false,
+
+                },
+                mainFiles: {
+                    'skrollr-menu': 'bower_components/skrollr-menu/dist/skrollr.menu.min.js'
                 },
                 exclude: [
                     'modernizr'

@@ -1,0 +1,36 @@
+.tabs-wrapper-row {
+    z-index: 990;
+    position: fixed;
+    top: 0px;
+    transition: top .5s, opacity .5s;
+    top: 0;
+    width: 100%;
+    background: color("shades", "white");
+    @extend .z-depth-1;
+    ul.tabs {
+        li {
+            a {
+                transition: background .4s, color .4s !important;
+                color: color('grey', 'darken-4') !important;
+            }
+            a:hover {
+                color: color('grey', 'base') !important;
+            }
+            a.active {
+                background: color('grey', 'base');
+                color: color('grey', 'lighten-4') !important;
+            }
+        }
+    }
+    &.visible {
+        top: 80px;
+        opacity: 1;
+    }
+    &.hidden {
+        opacity: 0;
+    }
+}
+
+.indicator {
+    background: color('grey', 'darken-2') !important;
+}

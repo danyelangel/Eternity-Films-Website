@@ -19,22 +19,22 @@
         <div class="navbar-fixed nojs">
     <nav data-630p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:0" data-700p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-800p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-850p="line-height:80px;height:80px;background:rgba(250,250,250,1);opacity:1" data-smooth-scrolling="off">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo valign-wrapper"><img src="images/navlogo.png" class="valign" height="90" data-800p="height:70px;" data-850p="height:55px;">
+            <a href="#intro" class="hash brand-logo valign-wrapper"><img src="images/navlogo.png" class="valign" height="90" data-800p="height:70px;" data-850p="height:55px;">
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#portfoo" onclick="$('window').scrollTo('#portfolio', 800 )">Portfolio</a>
+                <li><a href="#home" class="hash">Home</a>
                 </li>
-                <li><a href="components.html">Services</a>
+                <li><a href="#what" class="hash">What we do</a>
                 </li>
-                <li><a href="javascript.html">About</a>
+                <li><a href="#portfolio" class="hash">Portfolio</a>
                 </li>
-                <li><a href="javascript.html">Contact</a>
+                <li><a href="#about" class="hash">About Us</a>
                 </li>
             </ul>
         </div>
     </nav>
 </div>
-        <div class="intro_slide" style="background:#bdbdbd;margin-top:-64px"></div>
+        <div id="intro" class="intro_slide" style="background:#bdbdbd;margin-top:-64px"></div>
 <div class="intro_slide" style="background:#5238ae">
     <div class="valign-wrapper">
         <div class="valign">
@@ -96,6 +96,7 @@
 </div>
         <div data-600p="background:rgb(250, 250, 250)" data-630p="background:rgb(250, 250, 250);" style="overflow:hidden">
     <div id="hero-img" class="container nojs">
+        <div id="home" style="top:800vh;position:absolute"></div>
         <div class="row">
             <div class="valign-wrapper">
                 <div class="valign col m10 s12 offset-m1">
@@ -121,7 +122,21 @@
     <p class="center">
         <i>Show, don't tell</i>
     </p>
-    <a href="#" class="film-icon"><i class="mdi-av-videocam"></i></a>
+    <a href="#film" class="film-icon">
+        <i class="mdi-av-videocam amber-text text-lighten-4 em1-3"></i>
+    </a>
+    <a href="#web" class="web-icon">
+        <i class="mdi-device-devices green-text text-lighten-4 em1-3"></i>
+    </a>
+    <a href="#photo" class="photo-icon">
+        <i class="mdi-image-camera blue-text text-lighten-4 em1-3"></i>
+    </a>
+    <a href="#design" class="design-icon">
+        <i class="mdi-image-transform red-text text-lighten-4 em1-3"></i>
+    </a>
+    <a href="#marketing" class="marketing-icon">
+        <i class="mdi-social-poll purple-text text-lighten-4 em1-3"></i>
+    </a>
     <img src="images/roulette_film.png" class="responsive-img hide-on-med-and-down roulette-film roulette-current">
     <img src="images/roulette_web.png" class="responsive-img hide-on-med-and-down roulette-web roulette-current">
     <img src="images/roulette_photo.png" class="responsive-img hide-on-med-and-down roulette-photo roulette-current">
@@ -133,7 +148,8 @@
                 <div class="col l5 white-text what-fix" style="height:1px">.</div>
                 <div class="col l2 white-text what-fix-mobile" style="height:1px">.</div>
                 <div class="col l5 offset-l2">
-                    <div class="film service_wrapper">
+                    <div id="film">
+                        <div class="film service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">FILM PRODUCTION</h4>
         <p class="center">
@@ -144,7 +160,9 @@
     <p class="quote amber-text">Videos help you grow your brand even when you are not there.</p>
     <img src="images/film-services.png" class="responsive-img">
 </div>
-                    <div class="web service_wrapper">
+                    </div>
+                    <div id="web">
+                        <div class="web service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">WEB DEVELOPMENT</h4>
         <p class="center">
@@ -155,7 +173,9 @@
     <p class="quote green-text">We take your online presence very seriously. </p>
     <img src="images/web-services.png" class="responsive-img">
 </div>
-                    <div class="photo service_wrapper">
+                    </div>
+                    <div id="photo">
+                        <div class="photo service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">PHOTOGRAPHY</h4>
         <p class="center">
@@ -166,7 +186,9 @@
     <p class="quote blue-text">A photograph can make the difference between making or not making a purchase.</p>
     <img src="images/photo-services.png" class="responsive-img">
 </div>
-                    <div class="design service_wrapper">
+                    </div>
+                    <div id="design">
+                        <div class="design service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">DESIGN</h4>
         <p class="center">
@@ -177,7 +199,9 @@
     <p class="quote red-text">Eternity Films focuses on who you are and how you want to be perceived in the market.</p>
     <img src="images/design-services.png" class="responsive-img">
 </div>
-                    <div class="marketing service_wrapper-last">
+                    </div>
+                    <div id="marketing">
+                        <div class="marketing service_wrapper-last">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">MARKETING</h4>
         <p class="center">
@@ -189,6 +213,12 @@
     <p class="quote purple-text">Your customers are trying to find you and we'll help them reach you.</p>
     <img src="images/marketing-services.png" class="responsive-img">
 </div>
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -198,16 +228,179 @@
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
         <h1>Portfolio</h1>
     </div>
-    <div class="section-card-shadow"></div>
+    <div class="section-card-shadow__tabs">
+    </div>
     <div class="section-card-background"></div>
     <div class="section-card">
+
         <div class="row portfolio-container">
-            <div class="col m6 s12 grey portfolio-item valign-wrapper">
-                <div class="valign">
-                    <h2>THE LAST CALL</h2>
-                    <h4>THE GIMLET</h4>
-                </div>
-            </div>
+
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_1.png" alt="" class="responsive-img">
+        <a href="#work1" class="modal-trigger">
+            <h2>DANIEL ANGEL</h2>
+            <h4>WEBSITE</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_2.png" alt="" class="responsive-img">
+        <a href="#work2" class="modal-trigger">
+            <h2>OUR FIRST DATE</h2>
+            <h4>CINEMATOGRAPHY</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_3.png" alt="" class="responsive-img">
+        <a href="#work3" class="modal-trigger">
+            <h2>PRODUCT PHOTOGRAPHY</h2>
+            <h4>EXAMPLES</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_4.png" alt="" class="responsive-img">
+        <a href="#work4" class="modal-trigger">
+            <h2>DANIEL ANGEL</h2>
+            <h4>LOGO DESIGN</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_5.png" alt="" class="responsive-img">
+        <a href="#work5" class="modal-trigger">
+            <h2>PAIGE</h2>
+            <h4>MEDIA MANAGEMENT</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_6.png" alt="" class="responsive-img">
+        <a href="#work6" class="modal-trigger">
+            <h2>WHAT YOU KNOW</h2>
+            <h4>ABOUT MIAMI</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_7.png" alt="" class="responsive-img">
+        <a href="#work7" class="modal-trigger">
+            <h2>PORTRAIT</h2>
+            <h4>EXAMPLES</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_8.png" alt="" class="responsive-img">
+        <a href="#work8" class="modal-trigger">
+            <h2>THE LAST CALL</h2>
+            <h4>THE GIMLET</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_9.png" alt="" class="responsive-img">
+        <a href="#work9" class="modal-trigger">
+            <h2>MOLECULAR EVOLUTION</h2>
+            <h4>MUSIC VIDEO</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_10.png" alt="" class="responsive-img">
+        <a href="#work10" class="modal-trigger">
+            <h2>OLEODUCTO AL PACIFICO</h2>
+            <h4>CORPORATE</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_11.png" alt="" class="responsive-img">
+        <a href="#work11" class="modal-trigger">
+            <h2>SINNETIC</h2>
+            <h4>CORPORATE</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_12.png" alt="" class="responsive-img">
+        <a href="#work12" class="modal-trigger">
+            <h2></h2>
+            <h4></h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_13.png" alt="" class="responsive-img">
+        <a href="#work13" class="modal-trigger">
+            <h2>DECAMERON AMAZONAS</h2>
+            <h4>EDITING</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_14.png" alt="" class="responsive-img">
+        <a href="#work14" class="modal-trigger">
+            <h2>REAL STATE</h2>
+            <h4>EXAMPLES</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+            <!-- Item -->
+<div class="col m6 s12 grey portfolio-item grid">
+    <figure class="effect-bubba">
+        <img src="images/work_15.png" alt="" class="responsive-img">
+        <a href="#work15" class="modal-trigger">
+            <h2>WHAT YOU KNOW</h2>
+            <h4>ABOUT MIAMI (YOUTUBE)</h4>
+        </a>
+    </figure>
+</div>
+<!-- End of Item -->
+
         </div>
 
     </div>
@@ -284,6 +477,18 @@
         <p class="center white-text weight-300">&copy; 2015</p>
     </div>
 </div>
+    <div id="work1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Daniel &Aacute;ngel</h4>
+        <h5>Personal Portfolio Website</h5>
+        <p>
+            Artist Daniel &Aacute;ngel's portfolio website to showcase his work and services.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+    </div>
+</div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -304,94 +509,114 @@
 </script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
+    //Smooth Scroll & hash navigation
+    $(function () {
+        $('a.hash').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 120
+                    }, 1000);
+                    return false;
+                }
+            }
+
+        });
+    });
+</script>
+<script type="text/javascript">
+    function changeTitle(service, title, image) {
+        $('.roulette>h4').html(service);
+        $('.roulette>p>i').html(title);
+        $('.roulette>.roulette-current').css('opacity', '0');
+        $('.roulette>.roulette-' + image).css('opacity', '1');
+    }
+</script>
+<script type="text/javascript">
+    function checkServiceVisibility(services, titles, images, colors) {
+        for (service in services) {
+            if ($('.' + service + '>p').visible(true)) {
+                changeTitle(services[service], titles[service], images[service]);
+                $('.' + service).css('opacity', 1);
+                $('nav, nav ul a').removeClass();
+                $('nav').addClass(colors[service]);
+                $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
+                $('nav').addClass('darken-0 z-depth-1');
+                $('nav ul a').addClass('valign white-text weight-300');
+                return true
+            }
+
+        }
+        if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
+            $('nav, nav ul a').removeClass();
+            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
+            $('nav').addClass('grey darken-3 z-depth-1');
+            $('nav ul a').addClass('valign white-text text-darken-2 weight-300');
+            return true
+        }
+        if ($(window).scrollTop() < $('#what').offset().top) {
+            $('nav, nav ul a').removeClass();
+            $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
+            $('nav').addClass('grey lighten-5');
+            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
+            return true
+        }
+    }
+</script>
+<script type="text/javascript">
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
 
         $(document).ready(function () {
+            var services = {
+                    film: 'FILM PRODUCTION',
+                    web: 'WEB',
+                    photo: 'PHOTOGRAPHY',
+                    design: 'DESIGN',
+                    marketing: 'MARKETING'
+                },
+                titles = {
+                    film: 'Show don\'t tell',
+                    web: 'Your customers are online, you should be too',
+                    photo: 'You don’t take a photograph, you make it',
+                    design: 'Your brand is a promise. Your brand is an asset',
+                    marketing: 'If your work is not online it does not exist'
+                },
+                images = {
+                    film: 'film',
+                    web: 'web',
+                    photo: 'photo',
+                    design: 'design',
+                    marketing: 'marketing'
+                },
+                colors = {
+                    film: 'amber',
+                    web: 'green',
+                    photo: 'blue',
+                    design: 'red',
+                    marketing: 'purple'
+                };
+
             $('.nojs').addClass('hasjs').removeClass('nojs');
+            $(window).scroll(function () {
+
+                checkServiceVisibility(services, titles, images, colors);
+
+            });
+
+
+        });
+        $(window).load(function () {
+            skrollr.init({
+                forceHeight: true
+            });
             $('.roulette').pushpin({
                 top: $('#what>.section-card').offset().top,
                 bottom: $('.marketing').offset().top - 0,
                 offset: 120
             });
-            skrollr.init({
-                forceHeight: true
-            });
-            $(window).scroll(function () {
-                var services = {
-                        film: 'FILM PRODUCTION',
-                        web: 'WEB',
-                        photo: 'PHOTOGRAPHY',
-                        design: 'DESIGN',
-                        marketing: 'MARKETING'
-                    },
-                    titles = {
-                        film: 'Show don\'t tell',
-                        web: 'Your customers are online, you should be too',
-                        photo: 'You don’t take a photograph, you make it',
-                        design: 'Your brand is a promise. Your brand is an asset',
-                        marketing: 'If your work is not online it does not exist'
-                    },
-                    images = {
-                        film: 'film',
-                        web: 'web',
-                        photo: 'photo',
-                        design: 'design',
-                        marketing: 'marketing'
-                    },
-                    colors = {
-                        film: 'amber',
-                        web: 'green',
-                        photo: 'blue',
-                        design: 'red',
-                        marketing: 'purple'
-                    };
-
-                function changeTitle(service, title, image) {
-                    $('.roulette>h4').html(service);
-                    $('.roulette>p>i').html(title);
-                    $('.roulette>.roulette-current').css('opacity', '0');
-                    $('.roulette>.roulette-' + image).css('opacity', '1');
-                }
-
-                function checkServiceVisibility() {
-                    for (service in services) {
-                        if ($('.' + service + '>p').visible(true)) {
-                            changeTitle(services[service], titles[service], images[service]);
-                            $('.' + service).css('opacity', 1);
-                            $('nav, nav ul a').removeClass();
-                            $('nav').addClass(colors[service]);
-                            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
-                            $('nav').addClass('darken-0 z-depth-1');
-                            $('nav ul a').addClass('valign white-text weight-300');
-                            return true
-                        }
-
-                    }
-                    if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
-                        $('nav, nav ul a').removeClass();
-                        $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
-                        $('nav').addClass('grey darken-3 z-depth-1');
-                        $('nav ul a').addClass('valign white-text text-darken-2 weight-300');
-                        return true
-                    }
-                    if ($(window).scrollTop() < $('#what').offset().top) {
-                        $('nav, nav ul a').removeClass();
-                        $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
-                        $('nav').addClass('grey lighten-5');
-                        $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
-                        return true
-                    }
-                    /*if ($(window).scrollTop() < 0.3 * $(window).height()) {
-                        $('nav, nav ul a').removeClass();
-                        $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
-                        $('nav ul a').addClass('valign white-text weight-300');
-                    }*/
-                }
-                checkServiceVisibility();
-
-
-            });
-            $(window).scrollTop(5);
+            $('.modal-trigger').leanModal();
         });
     }
 </script>

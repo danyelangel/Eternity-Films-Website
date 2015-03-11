@@ -10,6 +10,11 @@
     display: none;
 }
 
+.roulette-fixed {
+    position: fixed;
+    top: 20vh;
+}
+
 .roulette {
     display: block;
     @media (min-width: 992px) {
@@ -51,10 +56,75 @@
         opacity: 0;
         z-index: 2;
     }
-    .film-icon {
+    .roulette-icon {
         position: absolute;
-        left: 240px;
-        top: 190px;
+        display: flex;
+        align-items: center;
+        width: 80px;
+        height: 80px;
         z-index: 995;
+        margin: 0;
+        &:hover {
+            i {
+                font-size: 2em;
+            }
+        }
+        i {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            transition: color .3s, font-size .5s;
+            font-size: 1em;
+        }
+    }
+    .film-icon {
+        @extend .roulette-icon;
+        left: 215px;
+        top: 165px;
+        &:hover {
+            i {
+                color: color('amber', 'darken-2') !important;
+            }
+        }
+    }
+    .web-icon {
+        @extend .roulette-icon;
+        left: 250px;
+        top: 300px;
+        &:hover {
+            i {
+                color: color('green', 'darken-2') !important;
+            }
+        }
+    }
+    .photo-icon {
+        @extend .roulette-icon;
+        left: 135px;
+        top: 385px;
+        &:hover {
+            i {
+                color: color('blue', 'darken-2') !important;
+            }
+        }
+    }
+    .design-icon {
+        @extend .roulette-icon;
+        left: 15px;
+        top: 300px;
+        &:hover {
+            i {
+                color: color('red', 'darken-2') !important;
+            }
+        }
+    }
+    .marketing-icon {
+        @extend .roulette-icon;
+        left: 55px;
+        top: 165px;
+        &:hover {
+            i {
+                color: color('purple', 'darken-2') !important;
+            }
+        }
     }
 }

@@ -1,25 +1,72 @@
 .portfolio-item {
-    height: 40vh;
-    transform: translateY(-9em);
-    @media (max-width: 992px) {
-        height: 30vh;
+    transform: translateY(-6em);
+    padding: 0 !important;
+    @media (max-width: 600px) {
+        height: 20vh;
     }
-    h2 {
-        text-align: center;
-        font-size: 2em;
-        line-height: 0.5em;
-        height: 0.3em;
-        color: color("shades", "white");
-        @extend .weight-700;
-    }
-    h4 {
-        text-align: center;
-        font-size: 2em;
-        line-height: 0.5em;
-        color: color("shades", "white");
-        @extend .weight-100;
-    }
-    .valign {
+}
+
+.grid {
+    figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
         width: 100%;
+        text-align: center;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        img {
+            transition: width .3s;
+            position: relative;
+            display: block;
+            width: 100%;
+            opacity: 0.8;
+        }
+        a {
+            @media (max-width: 600px) {
+                height: 20vh;
+            }
+            opacity: 0;
+            transition: all .3s;
+            color: color('grey',
+            'lighten-4');
+            text-transform: uppercase;
+            backface-visibility: hidden;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,
+            0,
+            0,
+            .5);
+            h2 {
+                text-align: center;
+                font-size: 2em;
+                line-height: 0.5em;
+                height: 0.3em;
+                color: color("shades", "white");
+                @extend .weight-700;
+            }
+            h4 {
+                text-align: center;
+                font-size: 2em;
+                line-height: 0.5em;
+                color: color("shades", "white");
+                @extend .weight-100;
+            }
+        }
+        &:hover {
+            a {
+                opacity: 1;
+                background: rgba(0, 0, 0, .5);
+            }
+        }
     }
 }
