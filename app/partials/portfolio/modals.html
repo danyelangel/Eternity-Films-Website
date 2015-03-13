@@ -1,6 +1,23 @@
-<!--@@include('portfolio/modal_template.html',{
-    "id":"1",
-    "title":"Daniel &Aacute;ngel",
-    "subtitle":"Personal Portfolio Website",
-    "content":"Artist Daniel &Aacute;ngel's portfolio website to showcase his work and services."
-    }) -->
+<div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioModal_template">
+</div>
+
+<template id="portfolioModal_template">
+    <div data-firebase-id="{{id}}" id="{{id}}-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4 data-firebase-child="title"></h4>
+            <h5 data-firebase-child="subtitle"></h5>
+            <p data-firebase-child="content">
+            </p>
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/1">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+        </div>
+    </div>
+</template>

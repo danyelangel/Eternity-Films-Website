@@ -9,6 +9,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/modernizr.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 </head>
 
 <body>
@@ -22,13 +23,17 @@
             <a href="#intro" class="hash brand-logo valign-wrapper"><img src="images/navlogo.png" class="valign" height="90" data-800p="height:70px;" data-850p="height:55px;">
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#home" class="hash">Home</a>
+                <li>
+                    <a href="#home" class="hash" data-firebase="menu/home"></a>
                 </li>
-                <li><a href="#what" class="hash">What we do</a>
+                <li>
+                    <a href="#what" class="hash" data-firebase="menu/what"></a>
                 </li>
-                <li><a href="#portfolio" class="hash">Portfolio</a>
+                <li>
+                    <a href="#portfolio" class="hash" data-firebase="menu/portfolio"></a>
                 </li>
-                <li><a href="#about" class="hash">About Us</a>
+                <li>
+                    <a href="#about" class="hash" data-firebase="menu/about"></a>
                 </li>
             </ul>
         </div>
@@ -109,7 +114,7 @@
 </div>
         <div id="what" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
-        <h1>What we do</h1>
+        <h1 data-firebase="what/title"></h1>
     </div>
     <div class="section-card-shadow"></div>
     <div class="section-card-background"></div>
@@ -226,188 +231,36 @@
 </div>
         <div id="portfolio" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
-        <h1>Portfolio</h1>
+        <h1 data-firebase="portfolio/title"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
 
-        <div class="row portfolio-container">
-
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_1.png" alt="" class="responsive-img">
-        <a href="#work1" class="modal-trigger">
-            <h2>DANIEL ANGEL</h2>
-            <h4>WEBSITE</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_2.png" alt="" class="responsive-img">
-        <a href="#work2" class="modal-trigger">
-            <h2>OUR FIRST DATE</h2>
-            <h4>CINEMATOGRAPHY</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_3.png" alt="" class="responsive-img">
-        <a href="#work3" class="modal-trigger">
-            <h2>PRODUCT PHOTOGRAPHY</h2>
-            <h4>EXAMPLES</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_4.png" alt="" class="responsive-img">
-        <a href="#work4" class="modal-trigger">
-            <h2>DANIEL ANGEL</h2>
-            <h4>LOGO DESIGN</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_5.png" alt="" class="responsive-img">
-        <a href="#work5" class="modal-trigger">
-            <h2>PAIGE</h2>
-            <h4>MEDIA MANAGEMENT</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_6.png" alt="" class="responsive-img">
-        <a href="#work6" class="modal-trigger">
-            <h2>WHAT YOU KNOW</h2>
-            <h4>ABOUT MIAMI</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_7.png" alt="" class="responsive-img">
-        <a href="#work7" class="modal-trigger">
-            <h2>PORTRAIT</h2>
-            <h4>EXAMPLES</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_8.png" alt="" class="responsive-img">
-        <a href="#work8" class="modal-trigger">
-            <h2>THE LAST CALL</h2>
-            <h4>THE GIMLET</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_9.png" alt="" class="responsive-img">
-        <a href="#work9" class="modal-trigger">
-            <h2>MOLECULAR EVOLUTION</h2>
-            <h4>MUSIC VIDEO</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_10.png" alt="" class="responsive-img">
-        <a href="#work10" class="modal-trigger">
-            <h2>OLEODUCTO AL PACIFICO</h2>
-            <h4>CORPORATE</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_11.png" alt="" class="responsive-img">
-        <a href="#work11" class="modal-trigger">
-            <h2>SINNETIC</h2>
-            <h4>CORPORATE</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_12.png" alt="" class="responsive-img">
-        <a href="#work12" class="modal-trigger">
-            <h2></h2>
-            <h4></h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_13.png" alt="" class="responsive-img">
-        <a href="#work13" class="modal-trigger">
-            <h2>DECAMERON AMAZONAS</h2>
-            <h4>EDITING</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_14.png" alt="" class="responsive-img">
-        <a href="#work14" class="modal-trigger">
-            <h2>REAL STATE</h2>
-            <h4>EXAMPLES</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-            <!-- Item -->
-<div class="col m6 s12 grey portfolio-item grid">
-    <figure class="effect-bubba">
-        <img src="images/work_15.png" alt="" class="responsive-img">
-        <a href="#work15" class="modal-trigger">
-            <h2>WHAT YOU KNOW</h2>
-            <h4>ABOUT MIAMI (YOUTUBE)</h4>
-        </a>
-    </figure>
-</div>
-<!-- End of Item -->
-
+        <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioThumbnail_template">
         </div>
+
+        <template id="portfolioThumbnail_template">
+            <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
+                <figure class="effect-bubba">
+                    <img src="images/{{id}}.png" alt="" class="responsive-img">
+                    <a href="#{{id}}-modal" class="modal-trigger">
+                        <h2 data-firebase-child="thumbnail/title"></h2>
+                        <h4 data-firebase-child="thumbnail/subtitle"></h4>
+                    </a>
+                </figure>
+            </div>
+            <script type="text/javascript">
+                $('.modal-trigger').leanModal();
+            </script>
+        </template>
 
     </div>
 </div>
         <div id="about" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
-        <h1>About Us</h1>
+        <h1 data-firebase="about/title"></h1>
     </div>
     <div class="section-card-shadow"></div>
     <div class="section-card-background"></div>
@@ -477,18 +330,29 @@
         <p class="center white-text weight-300">&copy; 2015</p>
     </div>
 </div>
-    <div id="work1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-        <h4>Daniel &Aacute;ngel</h4>
-        <h5>Personal Portfolio Website</h5>
-        <p>
-            Artist Daniel &Aacute;ngel's portfolio website to showcase his work and services.
-        </p>
-    </div>
-    <div class="modal-footer">
-        <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
-    </div>
+    <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioModal_template">
 </div>
+
+<template id="portfolioModal_template">
+    <div data-firebase-id="{{id}}" id="{{id}}-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4 data-firebase-child="title"></h4>
+            <h5 data-firebase-child="subtitle"></h5>
+            <p data-firebase-child="content">
+            </p>
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/1">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+        </div>
+    </div>
+</template>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -509,6 +373,8 @@
 </script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
+    $('.nojs').hide();
+
     //Smooth Scroll & hash navigation
     $(function () {
         $('a.hash').click(function () {
@@ -525,100 +391,6 @@
 
         });
     });
-</script>
-<script type="text/javascript">
-    function changeTitle(service, title, image) {
-        $('.roulette>h4').html(service);
-        $('.roulette>p>i').html(title);
-        $('.roulette>.roulette-current').css('opacity', '0');
-        $('.roulette>.roulette-' + image).css('opacity', '1');
-    }
-</script>
-<script type="text/javascript">
-    function checkServiceVisibility(services, titles, images, colors) {
-        for (service in services) {
-            if ($('.' + service + '>p').visible(true)) {
-                changeTitle(services[service], titles[service], images[service]);
-                $('.' + service).css('opacity', 1);
-                $('nav, nav ul a').removeClass();
-                $('nav').addClass(colors[service]);
-                $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
-                $('nav').addClass('darken-0 z-depth-1');
-                $('nav ul a').addClass('valign white-text weight-300');
-                return true
-            }
-
-        }
-        if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
-            $('nav, nav ul a').removeClass();
-            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
-            $('nav').addClass('grey darken-3 z-depth-1');
-            $('nav ul a').addClass('valign white-text text-darken-2 weight-300');
-            return true
-        }
-        if ($(window).scrollTop() < $('#what').offset().top) {
-            $('nav, nav ul a').removeClass();
-            $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
-            $('nav').addClass('grey lighten-5');
-            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
-            return true
-        }
-    }
-</script>
-<script type="text/javascript">
-    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-
-        $(document).ready(function () {
-            var services = {
-                    film: 'FILM PRODUCTION',
-                    web: 'WEB',
-                    photo: 'PHOTOGRAPHY',
-                    design: 'DESIGN',
-                    marketing: 'MARKETING'
-                },
-                titles = {
-                    film: 'Show don\'t tell',
-                    web: 'Your customers are online, you should be too',
-                    photo: 'You don’t take a photograph, you make it',
-                    design: 'Your brand is a promise. Your brand is an asset',
-                    marketing: 'If your work is not online it does not exist'
-                },
-                images = {
-                    film: 'film',
-                    web: 'web',
-                    photo: 'photo',
-                    design: 'design',
-                    marketing: 'marketing'
-                },
-                colors = {
-                    film: 'amber',
-                    web: 'green',
-                    photo: 'blue',
-                    design: 'red',
-                    marketing: 'purple'
-                };
-
-            $('.nojs').addClass('hasjs').removeClass('nojs');
-            $(window).scroll(function () {
-
-                checkServiceVisibility(services, titles, images, colors);
-
-            });
-
-
-        });
-        $(window).load(function () {
-            skrollr.init({
-                forceHeight: true
-            });
-            $('.roulette').pushpin({
-                top: $('#what>.section-card').offset().top,
-                bottom: $('.marketing').offset().top - 0,
-                offset: 120
-            });
-            $('.modal-trigger').leanModal();
-        });
-    }
 </script>
 
 </body>

@@ -1,4 +1,6 @@
 <script type="text/javascript">
+    $('.nojs').hide();
+
     //Smooth Scroll & hash navigation
     $(function () {
         $('a.hash').click(function () {
@@ -15,98 +17,4 @@
 
         });
     });
-</script>
-<script type="text/javascript">
-    function changeTitle(service, title, image) {
-        $('.roulette>h4').html(service);
-        $('.roulette>p>i').html(title);
-        $('.roulette>.roulette-current').css('opacity', '0');
-        $('.roulette>.roulette-' + image).css('opacity', '1');
-    }
-</script>
-<script type="text/javascript">
-    function checkServiceVisibility(services, titles, images, colors) {
-        for (service in services) {
-            if ($('.' + service + '>p').visible(true)) {
-                changeTitle(services[service], titles[service], images[service]);
-                $('.' + service).css('opacity', 1);
-                $('nav, nav ul a').removeClass();
-                $('nav').addClass(colors[service]);
-                $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');;
-                $('nav').addClass('darken-0 z-depth-1');
-                $('nav ul a').addClass('valign white-text weight-300');
-                return true
-            }
-
-        }
-        if ($(window).scrollTop() > $('#portfolio').offset().top - 400) {
-            $('nav, nav ul a').removeClass();
-            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png').addClass('valign');
-            $('nav').addClass('grey darken-3 z-depth-1');
-            $('nav ul a').addClass('valign white-text text-darken-2 weight-300');
-            return true
-        }
-        if ($(window).scrollTop() < $('#what').offset().top) {
-            $('nav, nav ul a').removeClass();
-            $('.brand-logo img').attr('src', 'images/eternitylogo_black.png').addClass('valign');
-            $('nav').addClass('grey lighten-5');
-            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
-            return true
-        }
-    }
-</script>
-<script type="text/javascript">
-    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-
-        $(document).ready(function () {
-            var services = {
-                    film: 'FILM PRODUCTION',
-                    web: 'WEB',
-                    photo: 'PHOTOGRAPHY',
-                    design: 'DESIGN',
-                    marketing: 'MARKETING'
-                },
-                titles = {
-                    film: 'Show don\'t tell',
-                    web: 'Your customers are online, you should be too',
-                    photo: 'You don’t take a photograph, you make it',
-                    design: 'Your brand is a promise. Your brand is an asset',
-                    marketing: 'If your work is not online it does not exist'
-                },
-                images = {
-                    film: 'film',
-                    web: 'web',
-                    photo: 'photo',
-                    design: 'design',
-                    marketing: 'marketing'
-                },
-                colors = {
-                    film: 'amber',
-                    web: 'green',
-                    photo: 'blue',
-                    design: 'red',
-                    marketing: 'purple'
-                };
-
-            $('.nojs').addClass('hasjs').removeClass('nojs');
-            $(window).scroll(function () {
-
-                checkServiceVisibility(services, titles, images, colors);
-
-            });
-
-
-        });
-        $(window).load(function () {
-            skrollr.init({
-                forceHeight: true
-            });
-            $('.roulette').pushpin({
-                top: $('#what>.section-card').offset().top,
-                bottom: $('.marketing').offset().top - 0,
-                offset: 120
-            });
-            $('.modal-trigger').leanModal();
-        });
-    }
 </script>

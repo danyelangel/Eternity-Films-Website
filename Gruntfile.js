@@ -64,7 +64,8 @@ module.exports = function (grunt) {
                     'skrollr-menu': 'bower_components/skrollr-menu/dist/skrollr.menu.min.js'
                 },
                 exclude: [
-                    'modernizr'
+                    'modernizr',
+                    'firebase'
                     ]
             }
         },
@@ -209,7 +210,10 @@ module.exports = function (grunt) {
         uglify: {
             development: {
                 files: {
-                    'build/js/scripts.js': ['.tmp/js/_bower.js', 'app/scripts/main.js']
+                    'build/js/scripts.js': ['.tmp/js/_bower.js',
+                                            'app/scripts/main.js',
+                                            'app/scripts/data.js',
+                                            'app/scripts/scroll.js']
                 }
             }
         },
@@ -306,7 +310,6 @@ module.exports = function (grunt) {
 
     // Javascript
     grunt.registerTask('js', [
-        'jshint:development',
         'uglify'
     ]);
     grunt.registerTask('js:production', [

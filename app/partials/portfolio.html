@@ -1,91 +1,29 @@
 <div id="portfolio" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
-        <h1>Portfolio</h1>
+        <h1 data-firebase="portfolio/title"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
 
-        <div class="row portfolio-container">
-
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"1", 
-                "title" : "DANIEL ANGEL",
-                "subtitle":"WEBSITE"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"2",
-                "title" : "OUR FIRST DATE",
-                "subtitle":"CINEMATOGRAPHY"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"3", 
-                "title" : "PRODUCT PHOTOGRAPHY",
-                "subtitle":"EXAMPLES"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"4", 
-                "title" : "DANIEL ANGEL",
-                "subtitle":"LOGO DESIGN"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"5", 
-                "title" : "PAIGE",
-                "subtitle":"MEDIA MANAGEMENT"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"6", 
-                "title" : "WHAT YOU KNOW",
-                "subtitle":"ABOUT MIAMI"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"7", 
-                "title" : "PORTRAIT",
-                "subtitle":"EXAMPLES"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"8",
-                "title" : "THE LAST CALL",
-                "subtitle":"THE GIMLET"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"9", 
-                "title" : "MOLECULAR EVOLUTION",
-                "subtitle":"MUSIC VIDEO"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"10",  
-                "title" : "OLEODUCTO AL PACIFICO",
-                "subtitle":"CORPORATE"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"11", 
-                "title" : "SINNETIC",
-                "subtitle":"CORPORATE"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"12", 
-                "title" : "",
-                "subtitle":""
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"13", 
-                "title" : "DECAMERON AMAZONAS",
-                "subtitle":"EDITING"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"14", 
-                "title" : "REAL STATE",
-                "subtitle":"EXAMPLES"
-            } ) -->
-            <!--@@include( 'portfolio/portfolio-item_template.html', { 
-                "id":"15", 
-                "title" : "WHAT YOU KNOW",
-                "subtitle":"ABOUT MIAMI (YOUTUBE)"
-            } ) -->
-
+        <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioThumbnail_template">
         </div>
+
+        <template id="portfolioThumbnail_template">
+            <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
+                <figure class="effect-bubba">
+                    <img src="images/{{id}}.png" alt="" class="responsive-img" />
+                    <a href="#{{id}}-modal" class="modal-trigger">
+                        <h2 data-firebase-child="thumbnail/title"></h2>
+                        <h4 data-firebase-child="thumbnail/subtitle"></h4>
+                    </a>
+                </figure>
+            </div>
+            <script type="text/javascript">
+                $('.modal-trigger').leanModal();
+            </script>
+        </template>
 
     </div>
 </div>
