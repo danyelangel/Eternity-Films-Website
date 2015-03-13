@@ -37,7 +37,7 @@ fireHelper.fillList = function (data, options) {
 
     });
     $element.find('[data-firebase-child]').each(function () {
-        $(this).fireHelper.single({
+        $(this).fireHelper({
             url: $(this).data('firebaseParent') + '/' + $(this).data('firebaseChild')
         });
     });
