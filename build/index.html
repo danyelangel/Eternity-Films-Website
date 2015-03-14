@@ -16,6 +16,17 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="loader">
+        <div class="valign-wrapper">
+            <div class="valign">
+                <div class="row">
+                    <div class="col s12 center">
+                        <img src="images/loader.gif" class="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="z-depth-1" style="background:rgb(250,250,250)">
         <div class="navbar-fixed nojs">
     <nav data-630p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:0" data-700p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-800p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-850p="line-height:80px;height:80px;background:rgba(250,250,250,1);opacity:1" data-smooth-scrolling="off">
@@ -39,7 +50,22 @@
         </div>
     </nav>
 </div>
-        <div id="intro" class="intro_slide" style="background:#bdbdbd;margin-top:-64px"></div>
+        <div class="hash-intro"></div>
+<div id="intro" class="intro_slide" style="background:#fff">
+    <div class="valign-wrapper">
+        <div class="valign container">
+            <div class="row">
+                <div class="intro-image col l4 m6 offset-l4 offset-m3 s12" style="transform:translateY(-10vh)" data-0p="transform:translateY(-20vh)" data-100p="transform:translateY(80vh)" data-smooth-scrolling="off">
+                    <img style="display:none" src="images/intro1.gif">
+                </div>
+                <div class="intro-text center col s12" data-0p="transform:translateY(-40vh)" data-100p="transform:translateY(60vh)" data-smooth-scrolling="off" style="transform:translateY(-40vh)">
+                    <img style="display:none" src="images/intro2.gif">
+                    <img style="max-width:150px" src="images/white.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="intro_slide" style="background:#5238ae">
     <div class="valign-wrapper">
         <div class="valign">
@@ -47,7 +73,7 @@
                 <div class="intro-image col m6 offset-m3 s12" style="background-image:url(images/animation-film.gif)" data-50p="transform:translateY(-80vh)" data-100p="transform:translateY(-10vh)" data-200p="transform:translateY(90vh)" data-smooth-scrolling="off">
                 </div>
                 <div class="intro-text center col s12" data-0p="transform:translateY(-130vh)" data-100p="transform:translateY(-30vh)" data-200p="transform:translateY(70vh)" data-smooth-scrolling="off">
-                    <img src="images/intro-1.png">
+                    <img class="responsive-img" src="images/intro-1.png">
                 </div>
             </div>
         </div>
@@ -59,7 +85,7 @@
             <div class="row">
                 <div class="intro-image col m6 offset-m3 s12" style="background-image:url(images/animation-web.gif)" data-150p="transform:translateY(-80vh)" data-200p="transform:translateY(0vh)" data-300p="transform:translateY(100vh)" data-smooth-scrolling="off">
                 </div>
-                <class class="intro-text center col s12" data-100p="transform:translateY(-130vh)" data-200p="transform:translateY(-30vh)" data-300p="transform:translateY(70vh)" data-smooth-scrolling="off"><img src="images/intro-2.png">
+                <class class="intro-text center col s12" data-100p="transform:translateY(-130vh)" data-200p="transform:translateY(-30vh)" data-300p="transform:translateY(70vh)" data-smooth-scrolling="off"><img class="responsive-img" src="images/intro-2.png">
             </class></div>
         </div>
     </div>
@@ -71,7 +97,7 @@
                 <div class="intro-image col m6 offset-m3 s12" style="background-image:url(images/animation-photo.gif)" data-250p="transform:translateY(-80vh)" data-300p="transform:translateY(0vh)" data-400p="transform:translateY(100vh)" data-smooth-scrolling="off">
                 </div>
                 <div class="intro-text center col s12" data-200p="transform:translateY(-130vh)" data-300p="transform:translateY(-30vh)" data-400p="transform:translateY(70vh)" data-smooth-scrolling="off">
-                    <img src="images/intro-3.png">
+                    <img class="responsive-img" src="images/intro-3.png">
                 </div>
             </div>
         </div>
@@ -83,7 +109,7 @@
             <div class="row">
                 <div class="intro-image col m6 offset-m3 s12" style="background-image:url(images/animation-design.gif)" data-350p="transform:translateY(-80vh)" data-400p="transform:translateY(0vh)" data-500p="transform:translateY(100vh)" data-smooth-scrolling="off">
                 </div>
-                <class class="intro-text center col s12" data-300p="transform:translateY(-130vh)" data-400p="transform:translateY(-30vh)" data-500p="transform:translateY(70vh)" data-smooth-scrolling="off"><img src="images/intro-4.png">
+                <class class="intro-text center col s12" data-300p="transform:translateY(-130vh)" data-400p="transform:translateY(-30vh)" data-500p="transform:translateY(70vh)" data-smooth-scrolling="off"><img class="responsive-img" src="images/intro-4.png">
             </class></div>
         </div>
     </div>
@@ -94,14 +120,15 @@
             <div class="row">
                 <div class="intro-image col m6 offset-m3 s12" style="background-image:url(images/animation-marketing.gif)" data-450p="transform:translateY(-80vh)" data-500p="transform:translateY(0vh)" data-600p="transform:translateY(100vh)" data-smooth-scrolling="off">
                 </div>
-                <class class="intro-text center col s12" data-400p="transform:translateY(-130vh)" data-500p="transform:translateY(-30vh)" data-600p="transform:translateY(70vh)" data-smooth-scrolling="off"><img src="images/intro-5.png">
+                <class class="intro-text center col s12" data-400p="transform:translateY(-130vh)" data-500p="transform:translateY(-30vh)" data-600p="transform:translateY(70vh)" data-smooth-scrolling="off"><img class="responsive-img" src="images/intro-5.png">
             </class></div>
         </div>
     </div>
 </div>
         <div data-600p="background:rgb(250, 250, 250)" data-630p="background:rgb(250, 250, 250);" style="overflow:hidden">
+    <div id="home" class="hash-home"></div>
     <div id="hero-img" class="container nojs">
-        <div id="home" style="top:800vh;position:absolute"></div>
+        <div style="top:800vh;position:absolute"></div>
         <div class="row">
             <div class="valign-wrapper">
                 <div class="valign col m10 s12 offset-m1">
@@ -114,32 +141,32 @@
 </div>
         <div id="what" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
-        <h1 data-firebase="what/title"></h1>
+        <h1 data-firebase="menu/what"></h1>
     </div>
     <div class="section-card-shadow"></div>
     <div class="section-card-background"></div>
     <div class="section-card">
         <div class="container">
-            <div class="row what-wrappper nojs">
+            <div class="row what-wrappper checkMobile">
                 <div class="col l5 hide-on-med-and-down roulette-wrapper">
                     <div class="roulette">
     <h4 class="center">ETERNITY FILMS</h4>
     <p class="center">
         <i>Show, don't tell</i>
     </p>
-    <a href="#film" class="film-icon">
+    <a href="#film" class="film-icon hash-noScroll">
         <i class="mdi-av-videocam amber-text text-lighten-4 em1-3"></i>
     </a>
-    <a href="#web" class="web-icon">
+    <a href="#web" class="web-icon hash-noScroll">
         <i class="mdi-device-devices green-text text-lighten-4 em1-3"></i>
     </a>
-    <a href="#photo" class="photo-icon">
+    <a href="#photo" class="photo-icon hash-noScroll">
         <i class="mdi-image-camera blue-text text-lighten-4 em1-3"></i>
     </a>
-    <a href="#design" class="design-icon">
+    <a href="#design" class="design-icon hash-noScroll">
         <i class="mdi-image-transform red-text text-lighten-4 em1-3"></i>
     </a>
-    <a href="#marketing" class="marketing-icon">
+    <a href="#marketing" class="marketing-icon hash-noScroll">
         <i class="mdi-social-poll purple-text text-lighten-4 em1-3"></i>
     </a>
     <img src="images/roulette_film.png" class="responsive-img hide-on-med-and-down roulette-film roulette-current">
@@ -154,7 +181,8 @@
                 <div class="col l2 white-text what-fix-mobile" style="height:1px">.</div>
                 <div class="col l5 offset-l2">
                     <div id="film">
-                        <div class="film service_wrapper">
+                        <div class="hash-film"></div>
+<div class="film service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">FILM PRODUCTION</h4>
         <p class="center">
@@ -167,7 +195,8 @@
 </div>
                     </div>
                     <div id="web">
-                        <div class="web service_wrapper">
+                        <div class="hash-web"></div>
+<div class="web service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">WEB DEVELOPMENT</h4>
         <p class="center">
@@ -180,7 +209,8 @@
 </div>
                     </div>
                     <div id="photo">
-                        <div class="photo service_wrapper">
+                        <div class="hash-photo"></div>
+<div class="photo service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">PHOTOGRAPHY</h4>
         <p class="center">
@@ -193,7 +223,8 @@
 </div>
                     </div>
                     <div id="design">
-                        <div class="design service_wrapper">
+                        <div class="hash-design"></div>
+<div class="design service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">DESIGN</h4>
         <p class="center">
@@ -206,7 +237,8 @@
 </div>
                     </div>
                     <div id="marketing">
-                        <div class="marketing service_wrapper-last">
+                        <div class="hash-marketing"></div>
+<div class="marketing service_wrapper-last">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">MARKETING</h4>
         <p class="center">
@@ -229,38 +261,39 @@
         </div>
     </div>
 </div>
-        <div id="portfolio" class="section">
+        <div class="hash-portfolio"></div>
+<div id="portfolio" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
-        <h1 data-firebase="portfolio/title"></h1>
+        <h1 data-firebase="menu/portfolio"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
-
-        <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioThumbnail_template">
+        <div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
         </div>
-
-        <template id="portfolioThumbnail_template">
-            <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
-                <figure class="effect-bubba">
-                    <img src="images/{{id}}.png" alt="" class="responsive-img">
-                    <a href="#{{id}}-modal" class="modal-trigger">
-                        <h2 data-firebase-child="thumbnail/title"></h2>
-                        <h4 data-firebase-child="thumbnail/subtitle"></h4>
-                    </a>
-                </figure>
-            </div>
-            <script type="text/javascript">
-                $('.modal-trigger').leanModal();
-            </script>
-        </template>
-
     </div>
 </div>
-        <div id="about" class="section">
+
+
+<template id="portfolioThumbnail_template" data-firebase-template>
+    <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
+        <figure class="effect-bubba">
+            <img src="images/{{id}}.png" alt="" class="responsive-img">
+            <a href="#{{id}}-modal" class="modal-trigger">
+                <h2 data-firebase-child="thumbnail/title"></h2>
+                <h4 data-firebase-child="thumbnail/subtitle"></h4>
+            </a>
+        </figure>
+    </div>
+    <script type="text/javascript">
+        $('.modal-trigger').leanModal();
+    </script>
+</template>
+        <div class="hash-about"></div>
+<div id="about" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
-        <h1 data-firebase="about/title"></h1>
+        <h1 data-firebase="menu/about"></h1>
     </div>
     <div class="section-card-shadow"></div>
     <div class="section-card-background"></div>
@@ -330,28 +363,32 @@
         <p class="center white-text weight-300">&copy; 2015</p>
     </div>
 </div>
-    <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioModal_template">
+    <div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioModal_template">
 </div>
 
-<template id="portfolioModal_template">
+<template id="portfolioModal_template" data-firebase-template>
     <div data-firebase-id="{{id}}" id="{{id}}-modal" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4 data-firebase-child="title"></h4>
             <h5 data-firebase-child="subtitle"></h5>
-            <p data-firebase-child="content">
+            <p data-firebase-child="description">
             </p>
             <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="http://lorempixel.com/580/250/nature/1">
-                    </li>
-                </ul>
+                <div class="slides" data-firebase-child-list data-firebase-child="slideshow" data-firebase-template-id="portfolioSlideshow_template">
+                </div>
             </div>
         </div>
         <div class="modal-footer">
             <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
         </div>
     </div>
+</template>
+
+
+<template id="portfolioSlideshow_template" data-firebase-child-template>
+    <li data-firebase-id="{{id}}">
+        <img src="images/{{id}}.png">
+    </li>
 </template>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -373,24 +410,6 @@
 </script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
-    $('.nojs').hide();
-
-    //Smooth Scroll & hash navigation
-    $(function () {
-        $('a.hash').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top - 120
-                    }, 1000);
-                    return false;
-                }
-            }
-
-        });
-    });
 </script>
 
 </body>

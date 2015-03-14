@@ -213,7 +213,8 @@ module.exports = function (grunt) {
                     'build/js/scripts.js': ['.tmp/js/_bower.js',
                                             'app/scripts/main.js',
                                             'app/scripts/data.js',
-                                            'app/scripts/scroll.js']
+                                            'app/scripts/scroll.js',
+                                           'app/scripts/utilities.js']
                 }
             }
         },

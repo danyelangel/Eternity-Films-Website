@@ -1,23 +1,27 @@
-<div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioModal_template">
+<div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioModal_template">
 </div>
 
-<template id="portfolioModal_template">
+<template id="portfolioModal_template" data-firebase-template>
     <div data-firebase-id="{{id}}" id="{{id}}-modal" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4 data-firebase-child="title"></h4>
             <h5 data-firebase-child="subtitle"></h5>
-            <p data-firebase-child="content">
+            <p data-firebase-child="description">
             </p>
             <div class="slider">
-                <ul class="slides">
-                    <li>
-                        <img src="http://lorempixel.com/580/250/nature/1">
-                    </li>
-                </ul>
+                <div class="slides" data-firebase-child-list data-firebase-child="slideshow" data-firebase-template-id="portfolioSlideshow_template">
+                </div>
             </div>
         </div>
         <div class="modal-footer">
             <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
         </div>
     </div>
+</template>
+
+
+<template id="portfolioSlideshow_template" data-firebase-child-template>
+    <li data-firebase-id="{{id}}">
+        <img src="images/{{id}}.png">
+    </li>
 </template>

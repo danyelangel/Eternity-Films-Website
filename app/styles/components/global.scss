@@ -15,3 +15,10 @@ html {
         width: 900px;
     }
 }
+
+.nojs {
+    display: none;
+    &.pageReady {
+        display: block;
+    }
+}

@@ -1,29 +1,29 @@
+<div class="hash-portfolio"></div>
 <div id="portfolio" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
-        <h1 data-firebase="portfolio/title"></h1>
+        <h1 data-firebase="menu/portfolio"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
-
-        <div class="row portfolio-container" data-firebase-list="portfolio/children" data-firebase-template="portfolioThumbnail_template">
+        <div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
         </div>
-
-        <template id="portfolioThumbnail_template">
-            <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
-                <figure class="effect-bubba">
-                    <img src="images/{{id}}.png" alt="" class="responsive-img" />
-                    <a href="#{{id}}-modal" class="modal-trigger">
-                        <h2 data-firebase-child="thumbnail/title"></h2>
-                        <h4 data-firebase-child="thumbnail/subtitle"></h4>
-                    </a>
-                </figure>
-            </div>
-            <script type="text/javascript">
-                $('.modal-trigger').leanModal();
-            </script>
-        </template>
-
     </div>
 </div>
+
+
+<template id="portfolioThumbnail_template" data-firebase-template>
+    <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
+        <figure class="effect-bubba">
+            <img src="images/{{id}}.png" alt="" class="responsive-img" />
+            <a href="#{{id}}-modal" class="modal-trigger">
+                <h2 data-firebase-child="thumbnail/title"></h2>
+                <h4 data-firebase-child="thumbnail/subtitle"></h4>
+            </a>
+        </figure>
+    </div>
+    <script type="text/javascript">
+        $('.modal-trigger').leanModal();
+    </script>
+</template>

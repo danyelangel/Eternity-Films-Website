@@ -17,3 +17,9 @@
 .intro-text {
     transform: translateY(-150%);
 }
+
+body.pageReady {
+    #intro {
+        margin-top: -64px;
+    }
+}

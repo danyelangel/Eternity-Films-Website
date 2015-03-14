@@ -1,4 +1,4 @@
-function onReadyScroll() {
+function scrollFunctions() {
     var services = {
             film: 'FILM PRODUCTION',
             web: 'WEB',
@@ -27,23 +27,36 @@ function onReadyScroll() {
             design: 'red',
             marketing: 'purple'
         };
-    $(window).scroll(function () {
-        checkServiceVisibility(services, titles, images, colors);
-    });
+    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+        var hashLinks = ['#intro', '#home', '#film', '#web', '#photo', '#design', '#marketing', '#portfolio', '#about'];
+        var hashLinkItems = ['.hash-intro', '.hash-home', '.hash-film', '.hash-web', '.hash-photo', '.hash-design', '.hash-marketing', '.hash-portfolio', '.hash-about'];
+        var hashItems = [];
+        $.each(hashLinkItems, function (index, value) {
+            hashItems.push($(value));
+        });
+        
+        
+        $(window).scroll(function () {
+            checkServiceVisibility(services, titles, images, colors);
+            hashNavigation(hashItems, hashLinks);
+        });
+        skrollr.init({
+            forceHeight: false,
+            render: skrollrReady()
+        });
+
+
+    }
+
+
 }
 
-function onLoadScroll() {
-    skrollr.init({
-        forceHeight: true
-    });
-    $('.roulette').pushpin({
-        top: $('#what>.section-card').offset().top,
-        bottom: $('.marketing').offset().top - 0,
-        offset: 120
-    });
+function skrollrReady() {
+    callbacks.fire();
 }
 
 function checkServiceVisibility(services, titles, images, colors) {
+
     var scrollTop = $(window).scrollTop();
 
     function changeClasses(color) {

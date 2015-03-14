@@ -1,0 +1,18 @@
+.loader {
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    .valign-wrapper {
+        height: 100vh;
+    }
+    .valign {
+        width: 100%;
+    }
+}
+
+body.pageReady {
+    .loader {
+        display: none;
+    }
+}

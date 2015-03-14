@@ -12,10 +12,17 @@
     }
 }
 
+body.pageReady {
+    nav {
+        opacity: 1;
+    }
+}
+
 nav {
+    opacity: 0;
     background: color('grey', 'lighten-5');
-    height: 80px;
-    line-height: 80px;
+    height: 50px;
+    line-height: 50px;
     box-shadow: none;
     .brand-logo {
         display: flex;
