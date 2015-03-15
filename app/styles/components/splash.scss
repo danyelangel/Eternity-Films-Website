@@ -4,10 +4,15 @@
     .valign-wrapper {
         height: 100vh;
     }
-    &.hasjs {
+    &.isDesktop {
         height: 330vh;
         .valign-wrapper {
             height: auto;
+        }
+    }
+    &.checkMobile {
+        img {
+            opacity: 1;
         }
     }
 }

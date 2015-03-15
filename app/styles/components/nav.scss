@@ -1,4 +1,4 @@
-.hasjs {
+.isDesktop {
     nav {
         transition: background .3s, box-shadow 0.3s;
         height: 150px;
@@ -6,7 +6,7 @@
     }
 }
 
-.nojs {
+.checkMobile {
     nav {
         @extend .z-depth-1;
     }
@@ -21,8 +21,8 @@ body.pageReady {
 nav {
     opacity: 0;
     background: color('grey', 'lighten-5');
-    height: 50px;
-    line-height: 50px;
+    height: 64px;
+    line-height: 64px;
     box-shadow: none;
     .brand-logo {
         display: flex;

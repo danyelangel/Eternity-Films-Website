@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="z-depth-1" style="background:rgb(250,250,250)">
-        <div class="navbar-fixed nojs">
+        <div class="navbar-fixed checkMobile nojs">
     <nav data-630p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:0" data-700p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-800p="line-height:120px;height:120px;background:rgba(0,0,0,0);opacity:1" data-850p="line-height:80px;height:80px;background:rgba(250,250,250,1);opacity:1" data-smooth-scrolling="off">
         <div class="nav-wrapper container">
             <a href="#intro" class="hash brand-logo valign-wrapper"><img src="images/navlogo.png" class="valign" height="90" data-800p="height:70px;" data-850p="height:55px;">
@@ -51,14 +51,14 @@
     </nav>
 </div>
         <div class="hash-intro"></div>
-<div id="intro" class="intro_slide" style="background:#fff">
+<div id="intro" class="intro_slide checkMobile" style="background:#fff">
     <div class="valign-wrapper">
         <div class="valign container">
             <div class="row">
-                <div class="intro-image col l4 m6 offset-l4 offset-m3 s12" style="transform:translateY(-20vh)" data-0p="transform:translateY(-20vh)" data-100p="transform:translateY(80vh)" data-smooth-scrolling="off">
+                <div class="intro-image col l4 m6 offset-l4 offset-m3 s12" data-0p="transform:translateY(-20vh)" data-100p="transform:translateY(80vh)" data-smooth-scrolling="off">
                     <img style="display:none" src="images/intro1.gif">
                 </div>
-                <div class="intro-text center col s12" data-0p="transform:translateY(-40vh)" data-100p="transform:translateY(60vh)" data-smooth-scrolling="off" style="transform:translateY(-40vh)">
+                <div class="intro-text center col s12" data-0p="transform:translateY(-40vh)" data-100p="transform:translateY(60vh)" data-smooth-scrolling="off">
                     <img style="display:none" src="images/intro2.gif">
                     <img style="max-width:150px" src="images/white.png">
                 </div>
@@ -127,7 +127,7 @@
 </div>
         <div data-600p="background:rgb(250, 250, 250)" data-630p="background:rgb(250, 250, 250);" style="overflow:hidden">
     <div id="home" class="hash-home"></div>
-    <div id="hero-img" class="container nojs">
+    <div id="hero-img" class="container checkMobile">
         <div style="top:800vh;position:absolute"></div>
         <div class="row">
             <div class="valign-wrapper">
@@ -147,7 +147,7 @@
     <div class="section-card-background"></div>
     <div class="section-card">
         <div class="container">
-            <div class="row what-wrappper checkMobile">
+            <div class="row what-wrappper checkMobile nojs">
                 <div class="col l5 hide-on-med-and-down roulette-wrapper">
                     <div class="roulette">
     <h4 class="center">ETERNITY FILMS</h4>
@@ -261,8 +261,8 @@
         </div>
     </div>
 </div>
-        <div class="hash-portfolio"></div>
-<div id="portfolio" class="section">
+        <div class="hash-portfolio" name="portfolio"></div>
+<div class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
         <h1 data-firebase="menu/portfolio"></h1>
     </div>
@@ -290,8 +290,8 @@
         $('.modal-trigger').leanModal();
     </script>
 </template>
-        <div class="hash-about"></div>
-<div id="about" class="section">
+        <div class="hash-about" name="about"></div>
+<div class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
         <h1 data-firebase="menu/about"></h1>
     </div>

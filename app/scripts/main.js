@@ -16,30 +16,29 @@ function onDataReady() {
     $(window).load(scrollFunctions());
 }
 
-function jumpToHash(hash) {
+function jumpToHash() {
+    target = $(location.hash);
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-        var target = $(hash);
-        if (target.length > 0) {
-            switch (hash) {
-            case '#intro':
-                $('html,body').scrollTop((target.offset().top - 64));
-                break;
-            case '#home':
-                console.log('home');
-                $('html,body').scrollTop(target.offset().top + $(window).height());
-                break;
-            case '#portfolio':
-                $('html,body').scrollTop((target.offset().top - 180));
-                break;
-            case '#about':
-                $('html,body').scrollTop((target.offset().top - 180));
-                break;
-            default:
-                console.log(hash);
-                $('html,body').scrollTop((target.offset().top - 65));
+        switch (location.hash) {
+        case '#intro':
+            $('html,body').scrollTop((target.offset().top - 64));
+            break;
+        case '#home':
+            $('html,body').scrollTop(target.offset().top + $(window).height());
+            break;
+        case '#portfolio':
+            $('html,body').scrollTop(($('.hash-portfolio').offset().top - 180));
+            break;
+        case '#about':
+            $('html,body').scrollTop(($('.hash-about').offset().top - 180));
+            break;
+        default:
+            if (target > 0) {
+                $('html,body').scrollTop((target.offset().top));
             }
-
         }
+
+
     }
 }
 
@@ -51,10 +50,9 @@ function onPageReady() {
     imagesLoaded($('#what'), function () {
 
         onImagesReady();
-
         //Go to url hash
         if (location.hash != '#about') {
-            jumpToHash(location.hash);
+            jumpToHash();
             $('body').addClass('pageReady');
         };
         $('.roulette').pushpin({
@@ -68,10 +66,9 @@ function onPageReady() {
     //Check if all images have been loaded
     imagesLoaded($('body'), function () {
         onImagesReady();
-        if (location.hash == '#about') {
-            jumpToHash(location.hash);
-            $('body').addClass('pageReady');
-        };
+        jumpToHash();
+        $('body').addClass('pageReady');
+
     });
 }
 

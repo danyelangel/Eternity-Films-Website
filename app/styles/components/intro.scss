@@ -18,8 +18,23 @@
     transform: translateY(-150%);
 }
 
-body.pageReady {
-    #intro {
+#intro {
+    &.isDesktop {
         margin-top: -64px;
+        .intro-image {
+            margin-top: 0vh;
+        }
+        .intro-text {
+            margin-top: -10px;
+        }
+    }
+    &.checkMobile {
+        margin-top: 0;
+        .intro-image {
+            margin-top: -10vh;
+        }
+        .intro-text {
+            margin-top: 10vh;
+        }
     }
 }
