@@ -24,7 +24,7 @@ function jumpToHash() {
             $('html,body').scrollTop((target.offset().top - 64));
             break;
         case '#home':
-            $('html,body').scrollTop(target.offset().top + $(window).height());
+            $('html,body').scrollTop($('.hash-home').offset().top + $(window).height());
             break;
         case '#portfolio':
             $('html,body').scrollTop(($('.hash-portfolio').offset().top - 180));
@@ -33,8 +33,9 @@ function jumpToHash() {
             $('html,body').scrollTop(($('.hash-about').offset().top - 180));
             break;
         default:
-            if (target > 0) {
-                $('html,body').scrollTop((target.offset().top));
+            target = $('[name=' + location.hash.slice(1) + ']');
+            if (target.length > 0) {
+                $('html,body').scrollTop(target.offset().top);
             }
         }
 

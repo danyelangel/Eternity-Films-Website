@@ -29,7 +29,7 @@ function scrollFunctions() {
         };
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
         var hashLinks = ['#intro', '#home', '#film', '#web', '#photo', '#design', '#marketing', '#portfolio', '#about'];
-        var hashLinkItems = ['.hash-intro', '.hash-home', '#film', '#web', '#photo', '#design', '#marketing', '.hash-portfolio', '.hash-about'];
+        var hashLinkItems = ['.hash-intro', '.hash-home', '.hash-film', '.hash-web', '.hash-photo', '.hash-design', '.hash-marketing', '.hash-portfolio', '.hash-about'];
         var hashItems = [];
         $.each(hashLinkItems, function (index, value) {
             hashItems.push($(value));

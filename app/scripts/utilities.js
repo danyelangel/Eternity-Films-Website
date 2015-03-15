@@ -10,16 +10,38 @@ function startingScreen() {
 function smoothScrollInit() {
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
         //Smooth Scroll
+        $('a.hash-noScroll').click(function () {
+            var target = $('[name=' + this.hash.slice(1) + ']');
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').scrollTop(target.offset().top);
+                location.hash = this.hash;
+                return false;
+
+            }
+
+        });
         $('a.hash').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
+                var hash = this.hash;
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top - 120
-                    }, 1000);
-                    location.hash = this.hash;
-                    return false;
+                    if (!target.attr('data-hash-offset')) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 120
+                        }, 1000);
+                        return false;
+                    } else {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 120 + ($(window).height() * target.attr('data-hash-offset') / 100)
+                        }, 1000);
+                        setTimeout(function () {
+                            location.hash = hash;
+                            return false;
+                        }, 1000)
+
+                    }
                 }
             }
 
