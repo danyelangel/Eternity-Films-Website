@@ -7,17 +7,7 @@ $(firebase selector).each {
 }
 
 
-
-
-
-
 */
-
-
-
-
-
-
 
 
 //Define objects
@@ -85,14 +75,6 @@ var escapeRegExp = function (string) {
                 });
             });
         },
-        outerTemplatesFinished: function () {
-            $('[data-firebase-child-list]').each(function () {
-                $(this).fireHelper({
-                    url: $(this).data('firebaseParent') + '/' + $(this).data('firebaseChild'),
-                    callback: fireHelper.fillList
-                });
-            });
-        },
         fillList: function (data, options) {
             var defaults = {},
                 settings = $.extend({}, defaults, options),
@@ -103,14 +85,15 @@ var escapeRegExp = function (string) {
 
             //Iterate over firebase array and render the template once per child
             $.each(data, function (key, value) {
-
-                $rendered = replaceBetween($template, {
-                    id: key
-                });
-                $element.append($rendered);
-                $('[data-firebase-id="' + key + '"]')
-                    .find('[data-firebase-child]')
-                    .attr('data-firebase-parent', settings.url + '/' + key);
+                if (value.visible) {
+                    $rendered = replaceBetween($template, {
+                        id: key
+                    });
+                    $element.append($rendered);
+                    $('[data-firebase-id="' + key + '"]')
+                        .find('[data-firebase-child], [data-firebase-child-src]')
+                        .attr('data-firebase-parent', settings.url + '/' + key);
+                }
 
             });
 
@@ -118,6 +101,12 @@ var escapeRegExp = function (string) {
             $element.find('[data-firebase-child]').each(function () {
                 $(this).fireHelper({
                     url: $(this).data('firebaseParent') + '/' + $(this).data('firebaseChild')
+                });
+            });
+            $element.find('[data-firebase-child-src]').each(function () {
+                $(this).fireHelper({
+                    url: $(this).data('firebaseParent') + '/' + $(this).data('firebaseChildSrc'),
+                    callback: fireHelper.renderUrl
                 });
             });
 
@@ -129,6 +118,24 @@ var escapeRegExp = function (string) {
         renderView: function (data, options) {
             $element = options.element;
             $element.html(data);
+        },
+        renderUrl: function (data, options) {
+
+            $element = options.element;
+            console.log(data);
+            $element.attr('src', data);
+        },
+        outerTemplatesFinished: function () {
+            if ($('[data-firebase-child-list]').length > 0) {
+                $('[data-firebase-child-list]').each(function () {
+                    $(this).fireHelper({
+                        url: $(this).data('firebaseParent') + '/' + $(this).data('firebaseChild'),
+                        callback: fireHelper.fillList
+                    });
+                });
+            } else {
+                callbacks.fire();
+            }
         },
         templates: $('template[data-firebase-template]').length,
         outerTemplatesRendered: false,

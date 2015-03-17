@@ -3,6 +3,11 @@ $(document).ready(function () {
     callbacks.add(onDataReady);
     fireHelper.init();
 });
+$(window).resize(function () {
+    setTimeout(function () {
+        location.reload();
+    }, 500);
+});
 
 
 
@@ -33,9 +38,17 @@ function jumpToHash() {
             $('html,body').scrollTop(($('.hash-about').offset().top - 180));
             break;
         default:
-            target = $('[name=' + location.hash.slice(1) + ']');
-            if (target.length > 0) {
-                $('html,body').scrollTop(target.offset().top);
+            if (location.hash.length > 1) {
+                target = $('[name=' + location.hash.slice(1) + ']');
+                if (target.length > 0) {
+                    $('html,body').scrollTop(target.offset().top);
+                } else {
+                    alert(location.hash);
+                    $('html,body').scrollTop(0);
+                }
+            } else {
+                alert(location.hash);
+                $('html,body').scrollTop(0);
             }
         }
 
@@ -56,10 +69,13 @@ function onPageReady() {
             jumpToHash();
             $('body').addClass('pageReady');
         };
-        $('.roulette').pushpin({
-            top: $('#what>.section-card').offset().top,
-            bottom: $('.marketing').offset().top - 0,
-            offset: 120
+
+        var pushpinOffset = ($(window).height() / 2) - 250;
+        console.log(pushpinOffset);
+        $('.roulette').css('margin-top', pushpinOffset).pushpin({
+            top: $('.roulette').offset().top + 0,
+            bottom: $('.marketing').offset().top + 50,
+            offset: pushpinOffset
         });
         startingScreen();
     });

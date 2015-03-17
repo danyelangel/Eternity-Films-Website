@@ -49,10 +49,27 @@ function smoothScrollInit() {
     }
 }
 
+
+
 function hashNavigation(hashItems, hashLinks) {
-    $.each(hashItems, function (index, value) {
-        if (value.visible() && $('body').hasClass('pageReady')) {
-            location.hash = hashLinks[index];
-        }
-    });
+    if ($('body').hasClass('pageReady')) {
+        var range = -$(window).height() / 2;
+        $.each(hashItems, function (index, value) {
+
+
+
+            var top = window.pageYOffset;
+            var distance = top - $(this).offset().top;
+            var hash = hashLinks[index];
+            console.log(top + ' ' + distance + ' ' + hash)
+            console.log(location.hash + ' ' + hash);
+            if (distance < 0 && distance > range) {
+                location.hash = hash;
+            }
+
+
+
+
+        });
+    }
 }

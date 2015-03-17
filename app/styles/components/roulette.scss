@@ -21,6 +21,9 @@ body.pageReady {
     @media (min-width: 992px) {
         width: 345px;
     }
+    &.pinned {
+        margin-top: 0 !important;
+    }
     h4 {
         transition: opacity .3s;
         font-weight: 700;

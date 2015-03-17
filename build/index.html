@@ -8,6 +8,8 @@
     <title>Eternity Films</title>
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="SHORTCUT ICON" href="images/favicon.png">
     <script src="js/modernizr.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 </head>
@@ -138,6 +140,7 @@
             </div>
         </div>
     </div>
+
 </div>
         <div id="what" class="section">
     <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
@@ -180,8 +183,8 @@
                 <div class="col l5 white-text what-fix" style="height:1px">.</div>
                 <div class="col l2 white-text what-fix-mobile" style="height:1px">.</div>
                 <div class="col l5 offset-l2">
-                    <div name="film">
-                        <div class="hash-film"></div>
+                    <div name="film" class="service_vwrapper valign-wrapper">
+                        <div class="hash-film what-hash"></div>
 <div class="film service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">FILM PRODUCTION</h4>
@@ -194,8 +197,8 @@
     <img src="images/film-services.png" class="responsive-img">
 </div>
                     </div>
-                    <div name="web">
-                        <div class="hash-web"></div>
+                    <div name="web" class="service_vwrapper valign-wrapper">
+                        <div class="hash-web what-hash"></div>
 <div class="web service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">WEB DEVELOPMENT</h4>
@@ -208,8 +211,8 @@
     <img src="images/web-services.png" class="responsive-img">
 </div>
                     </div>
-                    <div name="photo">
-                        <div class="hash-photo"></div>
+                    <div name="photo" class="service_vwrapper valign-wrapper">
+                        <div class="hash-photo what-hash"></div>
 <div class="photo service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">PHOTOGRAPHY</h4>
@@ -222,8 +225,8 @@
     <img src="images/photo-services.png" class="responsive-img">
 </div>
                     </div>
-                    <div name="design">
-                        <div class="hash-design"></div>
+                    <div name="design" class="service_vwrapper valign-wrapper">
+                        <div class="hash-design what-hash"></div>
 <div class="design service_wrapper">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">DESIGN</h4>
@@ -236,8 +239,8 @@
     <img src="images/design-services.png" class="responsive-img">
 </div>
                     </div>
-                    <div name="marketing">
-                        <div class="hash-marketing"></div>
+                    <div name="marketing" class="service_vwrapper valign-wrapper">
+                        <div class="hash-marketing what-hash"></div>
 <div class="marketing service_wrapper-last">
     <div class="hide-on-large-only what-title">
         <h4 class="center weight-700">MARKETING</h4>
@@ -369,26 +372,22 @@
 <template id="portfolioModal_template" data-firebase-template>
     <div data-firebase-id="{{id}}" id="{{id}}-modal" class="modal modal-fixed-footer">
         <div class="modal-content">
+            <!--           Title-->
             <h4 data-firebase-child="title"></h4>
+            <!--            Subitle-->
             <h5 data-firebase-child="subtitle"></h5>
+            <!--            Description-->
             <p data-firebase-child="description">
             </p>
-            <div class="slider">
-                <div class="slides" data-firebase-child-list data-firebase-child="slideshow" data-firebase-template-id="portfolioSlideshow_template">
-                </div>
+            <div class="video-container">
+                <iframe frameborder="0" data-firebase-child-src="videoUrl"></iframe>
             </div>
         </div>
+        <!--        Footer-->
         <div class="modal-footer">
             <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
         </div>
     </div>
-</template>
-
-
-<template id="portfolioSlideshow_template" data-firebase-child-template>
-    <li data-firebase-id="{{id}}">
-        <img src="images/{{id}}.png">
-    </li>
 </template>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

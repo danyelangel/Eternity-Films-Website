@@ -1,7 +1,19 @@
+.what-hash {
+    //    @media (min-width: 992px) {
+    //        width: 1px;
+    //        height: 500px;
+    //    }
+}
+
+.service_vwrapper {
+    min-height: 100vh;
+}
+
 .service_wrapper {
     opacity: 1;
     @media (min-width: 992px) {
-        margin-bottom: 20em;
+        margin-top: 10em;
+        margin-bottom: 10em;
         margin-top: -120px;
         transform: translateY(120px);
     }
