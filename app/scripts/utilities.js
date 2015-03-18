@@ -55,21 +55,47 @@ function hashNavigation(hashItems, hashLinks) {
     if ($('body').hasClass('pageReady')) {
         var range = -$(window).height() / 2;
         $.each(hashItems, function (index, value) {
-
-
-
             var top = window.pageYOffset;
             var distance = top - $(this).offset().top;
             var hash = hashLinks[index];
-            console.log(top + ' ' + distance + ' ' + hash)
-            console.log(location.hash + ' ' + hash);
             if (distance < 0 && distance > range) {
                 location.hash = hash;
             }
-
-
-
-
         });
+    }
+}
+
+function jumpToHash() {
+    target = $(location.hash);
+    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+        switch (location.hash) {
+        case '#intro':
+            $('html,body').scrollTop((target.offset().top - 64));
+            break;
+        case '#home':
+            $('html,body').scrollTop($('.hash-home').offset().top + $(window).height());
+            break;
+        case '#portfolio':
+            $('html,body').scrollTop(($('.hash-portfolio').offset().top - 180));
+            break;
+        case '#about':
+            $('html,body').scrollTop(($('.hash-about').offset().top - 180));
+            break;
+        default:
+            if (location.hash.length > 1) {
+                target = $('[name=' + location.hash.slice(1) + ']');
+                if (target.length > 0) {
+                    $('html,body').scrollTop(target.offset().top);
+                } else {
+                    location.hash = '#intro';
+                    $('html,body').scrollTop(0);
+                }
+            } else {
+                location.hash = '#intro';
+                $('html,body').scrollTop(0);
+            }
+        }
+
+
     }
 }

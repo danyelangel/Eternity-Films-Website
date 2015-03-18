@@ -120,9 +120,7 @@ var escapeRegExp = function (string) {
             $element.html(data);
         },
         renderUrl: function (data, options) {
-
             $element = options.element;
-            console.log(data);
             $element.attr('src', data);
         },
         outerTemplatesFinished: function () {

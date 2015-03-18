@@ -21,41 +21,6 @@ function onDataReady() {
     $(window).load(scrollFunctions());
 }
 
-function jumpToHash() {
-    target = $(location.hash);
-    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-        switch (location.hash) {
-        case '#intro':
-            $('html,body').scrollTop((target.offset().top - 64));
-            break;
-        case '#home':
-            $('html,body').scrollTop($('.hash-home').offset().top + $(window).height());
-            break;
-        case '#portfolio':
-            $('html,body').scrollTop(($('.hash-portfolio').offset().top - 180));
-            break;
-        case '#about':
-            $('html,body').scrollTop(($('.hash-about').offset().top - 180));
-            break;
-        default:
-            if (location.hash.length > 1) {
-                target = $('[name=' + location.hash.slice(1) + ']');
-                if (target.length > 0) {
-                    $('html,body').scrollTop(target.offset().top);
-                } else {
-                    alert(location.hash);
-                    $('html,body').scrollTop(0);
-                }
-            } else {
-                alert(location.hash);
-                $('html,body').scrollTop(0);
-            }
-        }
-
-
-    }
-}
-
 function onPageReady() {
     smoothScrollInit();
     $('.modal-trigger').leanModal();
@@ -69,14 +34,7 @@ function onPageReady() {
             jumpToHash();
             $('body').addClass('pageReady');
         };
-
-        var pushpinOffset = ($(window).height() / 2) - 250;
-        console.log(pushpinOffset);
-        $('.roulette').css('margin-top', pushpinOffset).pushpin({
-            top: $('.roulette').offset().top + 0,
-            bottom: $('.marketing').offset().top + 50,
-            offset: pushpinOffset
-        });
+        setRoulette();
         startingScreen();
     });
 
@@ -93,4 +51,15 @@ function onImagesReady() {
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
         skrollr.init().refresh();
     }
+}
+
+function setRoulette() {
+    var pushpinOffset = ($(window).height() / 2) - 250;
+    $('[name=film]').css('margin-top', -pushpinOffset);
+
+    $('.roulette').pushpin({
+        top: $('.roulette').offset().top,
+        bottom: $('.marketing').offset().top + 50,
+        offset: pushpinOffset
+    });
 }
