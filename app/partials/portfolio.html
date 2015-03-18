@@ -1,28 +1,34 @@
 <div class="hash-portfolio" name="portfolio"></div>
 <div class="section">
-    <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
+    <div class="section-title" data-bottom-center="transform:translateY(-7em)" data-top-bottom="transform[quadratic]:translateY(1em)">
         <h1 data-firebase="menu/portfolio"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
-        <div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
+        <div class="row portfolio-container">
+            <div class="grid" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
+            </div>
         </div>
     </div>
 </div>
 
 
 <template id="portfolioThumbnail_template" data-firebase-template>
-    <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
-        <figure class="effect-bubba">
-            <img src="images/{{id}}.png" alt="" class="responsive-img" />
-            <a href="#{{id}}-modal" class="modal-trigger">
-                <h2 data-firebase-child="thumbnail/title"></h2>
-                <h4 data-firebase-child="thumbnail/subtitle"></h4>
-            </a>
-        </figure>
-    </div>
+
+    <figure data-firebase-id="{{id}}" class="portfolio-item effect-apollo">
+        <img src="images/{{id}}.png" alt="img01" />
+        <figcaption>
+            <h2>
+                <span data-firebase-child="thumbnail/title">
+                </span>
+                <b data-firebase-child="thumbnail/subtitle"></b>
+            </h2>
+            <p>Lily likes to play with crayons and pencils</p>
+            <a href="#{{id}}-modal" class="modal-trigger">View more</a>
+        </figcaption>
+    </figure>
     <script type="text/javascript">
         $('.modal-trigger').leanModal();
     </script>

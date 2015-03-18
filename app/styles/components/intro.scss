@@ -1,3 +1,27 @@
+.introWrapperWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.introImgWrapper {
+    position: relative;
+    margin-top: 16vh;
+    height: 60%;
+    width: 100%;
+}
+
+.introImgText {
+    margin: auto;
+    height: 70%;
+}
+
+.introImgLoader {
+    margin: auto;
+    height: 30%;
+    bottom: 0;
+}
+
 .intro_slide {
     height: 100vh;
     margin: 0;

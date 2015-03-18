@@ -53,18 +53,21 @@
     </nav>
 </div>
         <div class="hash-intro"></div>
+
+<img style="display:none" src="images/intro1.gif">
+
+<img style="display:none" src="images/intro2.gif">
 <div id="intro" class="intro_slide checkMobile" style="background:#fff">
-    <div class="valign-wrapper">
-        <div class="valign container">
-            <div class="row">
-                <div class="intro-image col l4 m6 offset-l4 offset-m3 s12" data-0p="transform:translateY(-20vh)" data-100p="transform:translateY(80vh)" data-smooth-scrolling="off">
-                    <img style="display:none" src="images/intro1.gif">
-                </div>
-                <div class="intro-text center col s12" data-0p="transform:translateY(-40vh)" data-100p="transform:translateY(60vh)" data-smooth-scrolling="off">
-                    <img style="display:none" src="images/intro2.gif">
-                    <img style="max-width:150px" src="images/white.png">
-                </div>
-            </div>
+    <div class="introWrapperWrapper">
+        <div class="introImgWrapper">
+
+            <img style="display:block" src="images/white.png" class="introImgText">
+
+            <img style="display:block" src="images/white.png" class="introImgLoader">
+            <!--                <img style="max-width:150px;" src="images/white.png" />-->
+
+
+
         </div>
     </div>
 </div>
@@ -132,10 +135,10 @@
     <div id="hero-img" class="container checkMobile">
         <div style="top:800vh;position:absolute"></div>
         <div class="row">
-            <div class="valign-wrapper">
-                <div class="valign col m10 s12 offset-m1">
+            <div class="valign-wrapper" style="">
+                <div class="valign">
 
-                    <img src="images/hero.png" class="responsive-img" data-540p="transform:translateY(-35vh) scale(0.7);opacity:0;" data-630p="transform:translateY(55vh) scale(0.9);opacity:1;" data-800p="transform:translateY(225vh) scale(1);opacity:1;" data-870p="transform:translateY(295vh) scale(1.3);opacity:0;" data-smooth-scrolling="off">
+                    <img src="images/hero.png" class="responsive-img" data-540p="transform:translateY(-60vh) scale(0.7);opacity:0;" data-630p="transform:translateY(30vh) scale(0.9);opacity:1;" data-800p="transform:translateY(200vh) scale(1);opacity:1;" data-870p="transform:translateY(270vh) scale(1.3);opacity:0;" data-smooth-scrolling="off">
                 </div>
             </div>
         </div>
@@ -143,7 +146,7 @@
 
 </div>
         <div id="what" class="section">
-    <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
+    <div class="section-title" data-bottom-center="transform:translateY(-6em)" data-top-bottom="transform[quadratic]:translateY(1em)">
         <h1 data-firebase="menu/what"></h1>
     </div>
     <div class="section-card-shadow"></div>
@@ -266,36 +269,42 @@
 </div>
         <div class="hash-portfolio" name="portfolio"></div>
 <div class="section">
-    <div class="section-title" data-bottom-center="transform:translateY(-5em)" data-top-bottom="transform:translateY(1em)">
+    <div class="section-title" data-bottom-center="transform:translateY(-7em)" data-top-bottom="transform[quadratic]:translateY(1em)">
         <h1 data-firebase="menu/portfolio"></h1>
     </div>
     <div class="section-card-shadow__tabs">
     </div>
     <div class="section-card-background"></div>
     <div class="section-card">
-        <div class="row portfolio-container" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
+        <div class="row portfolio-container">
+            <div class="grid" data-firebase-list="portfolio" data-firebase-template-id="portfolioThumbnail_template">
+            </div>
         </div>
     </div>
 </div>
 
 
 <template id="portfolioThumbnail_template" data-firebase-template>
-    <div data-firebase-id="{{id}}" class="col m6 s12 grey portfolio-item grid">
-        <figure class="effect-bubba">
-            <img src="images/{{id}}.png" alt="" class="responsive-img">
-            <a href="#{{id}}-modal" class="modal-trigger">
-                <h2 data-firebase-child="thumbnail/title"></h2>
-                <h4 data-firebase-child="thumbnail/subtitle"></h4>
-            </a>
-        </figure>
-    </div>
+
+    <figure data-firebase-id="{{id}}" class="portfolio-item effect-apollo">
+        <img src="images/{{id}}.png" alt="img01">
+        <figcaption>
+            <h2>
+                <span data-firebase-child="thumbnail/title">
+                </span>
+                <b data-firebase-child="thumbnail/subtitle"></b>
+            </h2>
+            <p>Lily likes to play with crayons and pencils</p>
+            <a href="#{{id}}-modal" class="modal-trigger">View more</a>
+        </figcaption>
+    </figure>
     <script type="text/javascript">
         $('.modal-trigger').leanModal();
     </script>
 </template>
         <div class="hash-about" name="about"></div>
 <div class="section">
-    <div class="section-title" data-bottom-center="transform:translateY(-4em)" data-top-bottom="transform:translateY(1em)">
+    <div class="section-title" data-bottom-center="transform:translateY(-6em)" data-top-bottom="transform[quadratic]:translateY(1em)">
         <h1 data-firebase="menu/about"></h1>
     </div>
     <div class="section-card-shadow"></div>

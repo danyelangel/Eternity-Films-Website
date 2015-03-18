@@ -1,8 +1,8 @@
 //First screen gifs
 function startingScreen() {
-    $('#intro .intro-image').css('background-image', 'url(images/intro1.gif)');
+    $('.introImgText').attr('src', 'images/intro1.gif');
     setTimeout(function () {
-        $('#intro .intro-text img').attr('src', 'images/intro2.gif');
+        $('.introImgLoader').attr('src', 'images/intro2.gif');
     }, 5000);
 }
 
