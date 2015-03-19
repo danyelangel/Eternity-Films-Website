@@ -182,13 +182,17 @@ var escapeRegExp = function (string) {
 
                     evt.preventDefault();
                     $('#contactForm').slideUp();
+                    $('#contactError').slideUp();
                     $('#contactReady').slideDown();
                     $(this).html('Sent').addClass('disabled');
+                } else {
+                    $('#contactError').slideDown();
                 }
             }
 
             var submit = $('#contact_submit');
             $('#contactReady').slideUp();
+            $('#contactError').slideUp();
             submit.click(funct1);
         }
     };
