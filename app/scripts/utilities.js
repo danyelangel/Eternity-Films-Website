@@ -11,12 +11,23 @@ function smoothScrollInit() {
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
         //Smooth Scroll
         $('a.hash-noScroll').click(function () {
-            var target = $('[name=' + this.hash.slice(1) + ']');
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').scrollTop(target.offset().top);
-                location.hash = this.hash;
-                return false;
+            var target = $('.' + this.hash.slice(1));
+            if (target.length > 0) {
+                console.log($(window).height() + '+' + target.height());
+                if ($(window).height() > (1.5 * target.height())) {
+                    console.log('+');
+                    $('html,body').scrollTop(target.offset().top - ($(window).height() / 2) + target.height() / 2);
+                    location.hash = this.hash;
+                    return false;
+                } else {
+                    console.log('-');
+                    $('html,body').scrollTop(target.offset().top - 120);
+                    if (this.hash == "#film") {
+                        $('html,body').scrollTop(target.offset().top - 130);
+                    }
+                    location.hash = this.hash;
+                    return false;
+                }
 
             }
 

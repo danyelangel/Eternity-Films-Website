@@ -4,9 +4,11 @@ $(document).ready(function () {
     fireHelper.init();
 });
 $(window).resize(function () {
-    setTimeout(function () {
-        location.reload();
-    }, 500);
+    if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+        setTimeout(function () {
+            location.reload();
+        }, 500);
+    }
 });
 
 
@@ -54,8 +56,17 @@ function onImagesReady() {
 }
 
 function setRoulette() {
-    var pushpinOffset = ($(window).height() / 2) - 250;
-    $('[name=film]').css('margin-top', -pushpinOffset);
+    if ($(window).height() > 700) {
+        var pushpinOffset = ($(window).height() / 2) - 250;
+        $('[name=film]').css({
+            'margin-top': -pushpinOffset + 50
+        });
+    } else {
+        var pushpinOffset = 150;
+        $('[name=film]').css({
+            'margin-top': -60
+        });
+    }
 
     $('.roulette').pushpin({
         top: $('.roulette').offset().top,

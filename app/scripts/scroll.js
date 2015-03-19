@@ -87,7 +87,7 @@ function checkServiceVisibility(services, titles, images, colors) {
         }
 
     }
-    if (scrollTop > $('.hash-portfolio').offset().top - 650) {
+    if (scrollTop > $('.hash-portfolio').offset().top - $(window).height()) {
         changeClasses('grey');
         return true;
     }
