@@ -27,6 +27,7 @@ function onPageReady() {
     smoothScrollInit();
     $('.modal-trigger').leanModal();
     $('.slider').slider();
+    $('select').material_select();
     //Check if what images have been loaded
     imagesLoaded($('#what'), function () {
 
@@ -36,7 +37,9 @@ function onPageReady() {
             jumpToHash();
             $('body').addClass('pageReady');
         };
-        setRoulette();
+        if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+            setRoulette();
+        }
         startingScreen();
     });
 

@@ -3,7 +3,9 @@
 }
 
 .portfolio-item {
-    transform: translateY(-6em);
+    @media (min-width: 600px) {
+        transform: translateY(-6em);
+    }
     padding: 0 !important;
 }
 

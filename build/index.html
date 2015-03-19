@@ -59,6 +59,9 @@
                 <li>
                     <a href="#about" class="hash" data-firebase="menu/about"></a>
                 </li>
+                <li>
+                    <a href="#contact" class="hash" data-firebase="menu/contact"></a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -343,7 +346,7 @@
                 <h5 class="weight-300 center">THE TEAM</h5>
             </div>
             <div class="row">
-                <div class="col l4 m6 s8 offset-s2">
+                <div class="col l4 m6 s10 offset-s1">
                     <img src="images/team_kelly.png" class="responsive-img circle">
                     <p class="center weight-300 em1-3">KELLY<b>OVIEDO</b>
                     </p>
@@ -351,7 +354,7 @@
                         <br>FILMMAKER
                     </p>
                 </div>
-                <div class="col l4 m6 s8 offset-s2">
+                <div class="col l4 m6 s10 offset-s1">
                     <img src="images/team_daniel.png" class="responsive-img circle">
                     <p class="center weight-300 em1-3">DANIEL<b>&Aacute;NGEL</b>
                     </p>
@@ -359,7 +362,7 @@
                         <br>WEB DEVELOPER
                     </p>
                 </div>
-                <div class="col l4 m6 s8 offset-s2">
+                <div class="col l4 m6 s10 offset-s1">
                     <img src="images/team_daniela.png" class="responsive-img circle">
                     <p class="center weight-300 em1-3">DANIELA<b>GONZ&Aacute;LEZ</b>
                     </p>
@@ -367,7 +370,7 @@
                         <br>ANIMATOR
                     </p>
                 </div>
-                <div class="col l4 m6 s8 offset-s2 offset-l2">
+                <div class="col l4 m6 s10 offset-s1 offset-l2">
                     <img src="images/team_diego.png" class="responsive-img circle">
                     <p class="center weight-300 em1-3">DIEGO<b>GARZ&Oacute;N</b>
                     </p>
@@ -375,7 +378,7 @@
                         <br>COMPOSER
                     </p>
                 </div>
-                <div class="col l4 m6 s8 offset-s2 offset-m3">
+                <div class="col l4 m6 s10 offset-s1 offset-m3">
                     <img src="images/team_anthony.png" class="responsive-img circle">
                     <p class="center weight-300 em1-3">ANTHONY <b>MORELLO</b>
                     </p>
@@ -387,11 +390,110 @@
         </div>
     </div>
 </div>
+        <div class="hash-contact" name="contact"></div>
+<div class="section">
+    <div class="section-title" data-bottom-center="transform:translateY(-6em)" data-top-bottom="transform[quadratic]:translateY(1em)">
+        <h1 data-firebase="menu/contact"></h1>
+    </div>
+    <div class="section-card-shadow"></div>
+    <div class="section-card-background"></div>
+    <div class="section-card">
+        <div class="container">
+
+            <div class="row">
+                <div class="col m6 s12">
+                    <h5 class="center">CONTACT US</h5>
+                    <div>
+                        <p class="flow-text">
+                            <i class="mdi-communication-call"></i>
+                            <span>+(321) 230 - 6969</span> </p>
+                        <p class="flow-text">
+                            <i class="mdi-communication-email"></i>
+                            <span>info@eternity-films.com</span>
+                        </p>
+
+
+
+
+                    </div>
+                    <br>
+
+                </div>
+                <div class="col m6 s12">
+                    <h5 class="center">LET US CONTACT YOU</h5>
+                    <div class="row" id="contactReady">
+                        <i class="large mdi-action-done green-text" style="margin:auto;position:relative"></i>
+                        <p class="center">Your information has been received.
+                            <br>We will contact you soon.</p>
+                    </div>
+                    <div class="row" id="contactForm">
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input id="contact_firstName" type="text" class="validate">
+                                <label for="contact_firstName">First Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="contact_lastName" type="text" class="validate">
+                                <label for="contact_lastName">Last Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="contact_telephone" type="tel" class="validate">
+                                <label for="contact_telephone">Telephone</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="contact_email" type="email" class="validate">
+                                <label for="contact_email"> Email</label>
+                            </div>
+
+
+                        </div>
+                        <div class="col s6">
+                            <label>Interested in</label>
+                            <p>
+                                <input type="checkbox" id="contact_film">
+                                <label for="contact_film">Film</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="contact_web">
+                                <label for="contact_web">Web</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="contact_photo">
+                                <label for="contact_photo">Photography</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="contact_design">
+                                <label for="contact_design">Design</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="contact_marketing">
+                                <label for="contact_marketing">Marketing</label>
+                            </p>
+                            <div>
+                                <select id="contact_time">
+                                    <option value="" disabled="disabled" selected="selected">Call me at this time</option>
+                                    <option value="9:00AM - 12:00M">9:00AM - 12:00M</option>
+                                    <option value="12:00M - 3:00PM">12:00M - 3:00PM</option>
+                                    <option value="3:00AM - 6:00PM">3:00AM - 6:00PM</option>
+                                    <option value="Email me">Email me</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <button class="btn waves-effect waves-light right" id="contact_submit">Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="bottomColors"></div>
     </div>
     <div class="footer_placeholder"></div>
-<div class="footer valign-wrapper">
-    <div class="valign">
-
+<div class="footer">
+    <div class="container bottom">
         <img src="images/eternitylogo_white.png">
         <p class="center white-text weight-300">&copy; 2015</p>
     </div>

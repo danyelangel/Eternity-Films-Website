@@ -28,8 +28,8 @@ function scrollFunctions() {
             marketing: 'purple'
         };
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-        var hashLinks = ['#intro', '#home', '#film', '#web', '#photo', '#design', '#marketing', '#portfolio', '#about'];
-        var hashLinkItems = ['.hash-intro', '.hash-home', '[name=film]', '[name=web]', '[name=photo]', '[name=design]', '[name=marketing]', '.hash-portfolio', '.hash-about'];
+        var hashLinks = ['#intro', '#home', '#film', '#web', '#photo', '#design', '#marketing', '#portfolio', '#about', '#contact'];
+        var hashLinkItems = ['.hash-intro', '.hash-home', '[name=film]', '[name=web]', '[name=photo]', '[name=design]', '[name=marketing]', '.hash-portfolio', '.hash-about', '.hash-contact'];
         var hashItems = [];
         $.each(hashLinkItems, function (index, value) {
             hashItems.push($(value));

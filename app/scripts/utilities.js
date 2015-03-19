@@ -92,6 +92,9 @@ function jumpToHash() {
         case '#about':
             $('html,body').scrollTop(($('.hash-about').offset().top - 180));
             break;
+        case '#contact':
+            $('html,body').scrollTop(($('.hash-contact').offset().top - 180));
+            break;
         default:
             if (location.hash.length > 1) {
                 target = $('[name=' + location.hash.slice(1) + ']');

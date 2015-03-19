@@ -20,6 +20,9 @@
         box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.16);
         transform: translateZ(1px);
         background: color("shades", "white");
+        @media (max-width: 600px) {
+            height: 1em;
+        }
     }
     .section-card-shadow__tabs {
         height: 1em;
@@ -31,6 +34,9 @@
         height: 5em;
         transform: translateZ(2px);
         background: color("shades", "white");
+        @media (max-width: 600px) {
+            height: 1em;
+        }
     }
     .section-card {
         @media (min-width: 600px) {
@@ -43,7 +49,7 @@
         color("grey",
         "lighten-5") 0%,
         color("shades",
-        "white") 30%);
+        "white") 50%);
         /* W3C */
     }
 }

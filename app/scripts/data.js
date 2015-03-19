@@ -74,6 +74,7 @@ var escapeRegExp = function (string) {
                     callback: fireHelper.fillList
                 });
             });
+            fireHelper.uploadForm();
         },
         fillList: function (data, options) {
             var defaults = {},
@@ -144,5 +145,50 @@ var escapeRegExp = function (string) {
             if (fireHelper.templates == 0) {
                 callbacks.fire();
             }
+        },
+        uploadForm: function () {
+            var url = "https://danyelangel.firebaseio.com/eternityContact";
+            var firebaseRef = new Firebase(url);
+
+            function funct1(evt) {
+                var firstName = $('#contact_firstName').val();
+                var lastName = $('#contact_lastName').val();
+                var telephone = $('#contact_telephone').val();
+                var email = $('#contact_email').val();
+                var film = $('#contact_film').is(':checked');
+                var web = $('#contact_web').is(':checked');
+                var photo = $('#contact_photo').is(':checked');
+                var design = $('#contact_design').is(':checked');
+                var marketing = $('#contact_marketing').is(':checked');
+                var time = $('#contact_time').val();
+
+                if (firstName != '' && lastName != '' && telephone != '' && email != '' && time != '') {
+
+                    var postRef = firebaseRef.push(); // create a new post
+                    postRef.set({
+                        firstName: firstName,
+                        lastName: lastName,
+                        telephone: telephone,
+                        email: email,
+                        interests: {
+                            film: film,
+                            web: web,
+                            photo: photo,
+                            design: design,
+                            marketing: marketing
+                        },
+                        time: time
+                    });
+
+                    evt.preventDefault();
+                    $('#contactForm').slideUp();
+                    $('#contactReady').slideDown();
+                    $(this).html('Sent').addClass('disabled');
+                }
+            }
+
+            var submit = $('#contact_submit');
+            $('#contactReady').slideUp();
+            submit.click(funct1);
         }
     };

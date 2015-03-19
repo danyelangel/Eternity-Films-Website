@@ -1,17 +1,20 @@
 .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     z-index: -5;
     position: fixed;
     bottom: 0;
-    height: 50%;
-    max-height: 300px;
+    height: 30%;
+    max-height: 30%;
     width: 100%;
     background: color('grey', 'darken-3');
     //background: url(../images/footer.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .valign {
-        width: 100%;
+    .bottom {
+        padding: 2rem;
     }
     img {
         margin: 0 auto;
@@ -20,6 +23,19 @@
 }
 
 .footer_placeholder {
-    height: 50vh;
-    max-height: 300px;
+    max-height: 30%;
+    height: 30vh;
+}
+
+.bottomColors {
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: url(../images/footer-colors.png);
+    background-size: contain;
+}
+
+#contactReady {
+    display: flex;
+    flex-direction: column;
 }
