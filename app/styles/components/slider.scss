@@ -69,7 +69,7 @@
             width: 16px;
             margin: 0 12px;
             background-color: color('grey', 'lighten-2');
-            @include transition(background-color .3s);
+            transition: background-color .3s;
             border-radius: 50%;
             &.active {
                 background-color: color('green', 'base');

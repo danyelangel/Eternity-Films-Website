@@ -212,9 +212,9 @@ module.exports = function (grunt) {
         uglify: {
             development: {
                 files: {
-                    'build/js/scripts1.js': ['app/scripts/data.js'],
-                    'build/js/scripts2.js': ['.tmp/js/_bower.js',
+                    'build/js/scripts.js': ['.tmp/js/_bower.js',
                                             'app/scripts/main.js',
+                                             'app/scripts/data.js',
                                             'app/scripts/scroll.js',
                                         'app/scripts/utilities.js']
                 }
