@@ -3,10 +3,10 @@
 }
 
 .portfolio-item {
-    @media (min-width: 600px) {
-        transform: translateY(-6em);
-    }
     padding: 0 !important;
+    @media (min-width: 600px) {
+        transform: translateY(-1rem);
+    }
 }
 
 .grid {

@@ -83,6 +83,7 @@ var escapeRegExp = function (string) {
                 $element = settings.element;
             $element.html('');
             $template = $('#' + $element.data('firebaseTemplateId')).html();
+            console.log($('#' + $element.data('firebaseTemplateId')).html());
 
             //Iterate over firebase array and render the template once per child
             $.each(data, function (key, value) {
@@ -161,6 +162,7 @@ var escapeRegExp = function (string) {
                 var design = $('#contact_design').is(':checked');
                 var marketing = $('#contact_marketing').is(':checked');
                 var time = $('#contact_time').val();
+                var timestamp = Date.now();
 
                 if (firstName != '' && lastName != '' && telephone != '' && email != '' && time != '') {
 
@@ -171,13 +173,29 @@ var escapeRegExp = function (string) {
                         telephone: telephone,
                         email: email,
                         interests: {
-                            film: film,
-                            web: web,
-                            photo: photo,
-                            design: design,
-                            marketing: marketing
+                            film: {
+                                title: 'Film',
+                                checked: film
+                            },
+                            web: {
+                                title: 'Web',
+                                checked: web
+                            },
+                            photo: {
+                                title: 'Photography',
+                                checked: photo
+                            },
+                            design: {
+                                title: 'Design',
+                                checked: design
+                            },
+                            marketing: {
+                                title: 'Marketing',
+                                checked: marketing
+                            }
                         },
-                        time: time
+                        time: time,
+                        timestamp: timestamp
                     });
 
                     evt.preventDefault();
@@ -189,10 +207,11 @@ var escapeRegExp = function (string) {
                     $('#contactError').slideDown();
                 }
             }
-
-            var submit = $('#contact_submit');
-            $('#contactReady').slideUp();
-            $('#contactError').slideUp();
-            submit.click(funct1);
+            if ($('#contact_submit').length > 0) {
+                var submit = $('#contact_submit');
+                $('#contactReady').slideUp();
+                $('#contactError').slideUp();
+                submit.click(funct1);
+            }
         }
     };
