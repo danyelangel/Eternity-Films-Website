@@ -139,7 +139,7 @@ module.exports = function (grunt) {
                     includesDir: 'app/partials/'
                 },
                 files: {
-                    '.tmp/': 'app/index.html'
+                    '.tmp/': 'app/*.html'
                 }
             }
         },
@@ -153,12 +153,14 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'build/index.html': '.tmp/app/index.html'
+                    'build/index.html': '.tmp/app/index.html',
+                    'build/slideshow.html': '.tmp/app/slideshow.html'
                 }
             },
             development: {
                 files: {
-                    'build/index.html': '.tmp/app/index.html'
+                    'build/index.html': '.tmp/app/index.html',
+                    'build/slideshow.html': '.tmp/app/slideshow.html'
                 }
             }
         },
@@ -210,11 +212,11 @@ module.exports = function (grunt) {
         uglify: {
             development: {
                 files: {
+                    'build/js/scripts1.js': ['app/scripts/data.js'],
                     'build/js/scripts2.js': ['.tmp/js/_bower.js',
                                             'app/scripts/main.js',
-                                            'app/scripts/data.js',
                                             'app/scripts/scroll.js',
-                                           'app/scripts/utilities.js']
+                                        'app/scripts/utilities.js']
                 }
             }
         },
