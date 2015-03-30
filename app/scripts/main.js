@@ -5,9 +5,14 @@ $(document).ready(function () {
 });
 $(window).resize(function () {
     if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+
         setTimeout(function () {
-            location.reload();
+
+            if ((screen.availHeight || screen.height - 30) >= window.innerHeight) {
+                location.reload();
+            }
         }, 500);
+
     }
 });
 

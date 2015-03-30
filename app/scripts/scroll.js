@@ -63,7 +63,19 @@ function checkServiceVisibility(services, titles, images, colors) {
         $('nav, nav ul a').removeClass();
         if (color == 'white') {
             $('.brand-logo img').attr('src', 'images/eternitylogo_black.png');
-            $('nav').addClass('grey lighten-5');
+            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
+            $('nav').addClass('z-depth-1');
+            return true;
+        } else if (color == 'transparent') {
+            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png');
+            $('nav ul a').addClass('valign white-text weight-300');
+            return true;
+        } else if (color == 'transparent-black') {
+            $('.brand-logo img').attr('src', 'images/eternitylogo_black.png');
+            $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
+            return true;
+        } else if (color == 'transparent-black-nologo') {
+            $('.brand-logo img').attr('src', 'images/eternitylogo_white.png');
             $('nav ul a').addClass('valign grey-text text-darken-2 weight-300');
             return true;
         } else {
@@ -87,12 +99,24 @@ function checkServiceVisibility(services, titles, images, colors) {
         }
 
     }
+    if (scrollTop > $('.hash-about').offset().top - $(window).height() / 2) {
+        changeClasses('white');
+        return true;
+    }
     if (scrollTop > $('.hash-portfolio').offset().top - $(window).height()) {
         changeClasses('grey');
         return true;
     }
+    if (scrollTop < $(window).height()) {
+        changeClasses('transparent-black-nologo');
+        return true;
+    }
+    if (scrollTop < $('.hash-home').offset().top) {
+        changeClasses('transparent');
+        return true;
+    }
     if (scrollTop < $('.hash-about').offset().top) {
-        changeClasses('white');
+        changeClasses('transparent-black');
     }
 }
 
